@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<img src="~/home/Pictures/images.jpeg" height="104" width="120">
+		<a href="http://www.javatpoint.com">JavaTpoint</a>
+	</body>
+</html>

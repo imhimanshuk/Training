@@ -1,0 +1,1575 @@
+himanshu@himanshu-Inspiron-3541:~$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.17-0ubuntu0.16.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use employees;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_employees  |
++----------------------+
+| employee_information |
+| employee_salary      |
++----------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc employee_information;
++---------------------+-------------+------+-----+---------+----------------+
+| Field               | Type        | Null | Key | Default | Extra          |
++---------------------+-------------+------+-----+---------+----------------+
+| employee_id         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| employee_name       | varchar(32) | YES  |     | NULL    |                |
+| employee_department | varchar(32) | YES  |     | NULL    |                |
+| employee_city       | varchar(32) | YES  |     | NULL    |                |
+| employee_contact    | double      | YES  |     | NULL    |                |
++---------------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from employee_information;
++-------------+---------------+---------------------+---------------+------------------+
+| employee_id | employee_name | employee_department | employee_city | employee_contact |
++-------------+---------------+---------------------+---------------+------------------+
+|         100 | Amit          | Admin               | Jaipur        |       9988556644 |
+|         101 | Vijay         | Tech                | Kanpur        |       1144225577 |
+|         102 | Rohit         | Tech                | Meerut        |       9955886655 |
+|         103 | Pankaj        | Tech                | Gaziababad    |       6688559944 |
+|         104 | Nitin         | Sales               | Delhi         |       7788559966 |
+|         105 | Rashi         | HR                  | Meerut        |       9950786655 |
++-------------+---------------+---------------------+---------------+------------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from employee_salary;
++-------------+----------------+--------+
+| employee_id | date_of_joinig | salary |
++-------------+----------------+--------+
+|         100 | 2015-02-02     |  24000 |
+|         101 | 2015-06-01     |  20000 |
+|         102 | 2012-12-02     |  30000 |
+|         103 | 2010-12-26     |  45000 |
+|         104 | 2016-11-25     |  20000 |
+|         105 | 2017-01-25     |  15000 |
++-------------+----------------+--------+
+6 rows in set (0.00 sec)
+
+mysql> insert into employee_salary(date_of_joinig,salary) values 
+    -> ('2015-12-02',25000);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from employee_salary;
++-------------+----------------+--------+
+| employee_id | date_of_joinig | salary |
++-------------+----------------+--------+
+|         100 | 2015-02-02     |  24000 |
+|         101 | 2015-06-01     |  20000 |
+|         102 | 2012-12-02     |  30000 |
+|         103 | 2010-12-26     |  45000 |
+|         104 | 2016-11-25     |  20000 |
+|         105 | 2017-01-25     |  15000 |
+|        NULL | 2015-12-02     |  25000 |
++-------------+----------------+--------+
+7 rows in set (0.00 sec)
+
+mysql> desc employee_salary;
++----------------+---------+------+-----+---------+-------+
+| Field          | Type    | Null | Key | Default | Extra |
++----------------+---------+------+-----+---------+-------+
+| employee_id    | int(11) | YES  | MUL | NULL    |       |
+| date_of_joinig | date    | YES  |     | NULL    |       |
+| salary         | int(11) | YES  |     | NULL    |       |
++----------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee_salary;
++-------------+----------------+--------+
+| employee_id | date_of_joinig | salary |
++-------------+----------------+--------+
+|         100 | 2015-02-02     |  24000 |
+|         101 | 2015-06-01     |  20000 |
+|         102 | 2012-12-02     |  30000 |
+|         103 | 2010-12-26     |  45000 |
+|         104 | 2016-11-25     |  20000 |
+|         105 | 2017-01-25     |  15000 |
+|        NULL | 2015-12-02     |  25000 |
++-------------+----------------+--------+
+7 rows in set (0.00 sec)
+
+mysql> select * from employee_salary;
++-------------+----------------+--------+
+| employee_id | date_of_joinig | salary |
++-------------+----------------+--------+
+|         100 | 2015-02-02     |  24000 |
+|         101 | 2015-06-01     |  20000 |
+|         102 | 2012-12-02     |  30000 |
+|         103 | 2010-12-26     |  45000 |
+|         104 | 2016-11-25     |  20000 |
+|         105 | 2017-01-25     |  15000 |
++-------------+----------------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select * from  employee_information;
++-------------+---------------+---------------------+---------------+------------------+
+| employee_id | employee_name | employee_department | employee_city | employee_contact |
++-------------+---------------+---------------------+---------------+------------------+
+|         100 | Amit          | Admin               | Jaipur        |       9988556644 |
+|         101 | Vijay         | Tech                | Kanpur        |       1144225577 |
+|         102 | Rohit         | Tech                | Meerut        |       9955886655 |
+|         103 | Pankaj        | Tech                | Gaziababad    |       6688559944 |
+|         104 | Nitin         | Sales               | Delhi         |       7788559966 |
+|         105 | Rashi         | HR                  | Meerut        |       9950786655 |
++-------------+---------------+---------------------+---------------+------------------+
+6 rows in set (0.00 sec)
+
+mysql> select empi.employee_id, empi.employee_name,empi.employee_department,emps.salary from employee_information empi inner join employee_salary emps where empi.employee_id=emps.employee_id;
++-------------+---------------+---------------------+--------+
+| employee_id | employee_name | employee_department | salary |
++-------------+---------------+---------------------+--------+
+|         100 | Amit          | Admin               |  24000 |
+|         101 | Vijay         | Tech                |  20000 |
+|         102 | Rohit         | Tech                |  30000 |
+|         103 | Pankaj        | Tech                |  45000 |
+|         104 | Nitin         | Sales               |  20000 |
+|         105 | Rashi         | HR                  |  15000 |
++-------------+---------------+---------------------+--------+
+6 rows in set (0.06 sec)
+
+mysql> create database student_record;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use student_record;
+Database changed
+mysql> create table courses(course_id int not null auto_increment primary key,course_name varchar(32),duration_in_year int,fees_per_year int);
+Query OK, 0 rows affected (0.53 sec)
+
+mysql> create table student_information(course_id int not null,student_id int not null primary key auto_increment,student_name varchar(32), father_name varchar(32),Date_of_birth date,Email varchar(32),contact real,city varchar(32)); Query OK, 0 rows affected (0.30 sec)
+
+mysql> show tables;
++--------------------------+
+| Tables_in_student_record |
++--------------------------+
+| courses                  |
+| student_information      |
++--------------------------+
+2 rows in set (0.00 sec)
+
+mysql> alter table student_information add constraint foreign key fksi(course_id) references courses(course_id);
+Query OK, 0 rows affected (0.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student_information;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| course_id     | int(11)     | NO   | MUL | NULL    |                |
+| student_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(32) | YES  |     | NULL    |                |
+| father_name   | varchar(32) | YES  |     | NULL    |                |
+| Date_of_birth | date        | YES  |     | NULL    |                |
+| Email         | varchar(32) | YES  |     | NULL    |                |
+| contact       | double      | YES  |     | NULL    |                |
+| city          | varchar(32) | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> desc courses;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| course_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| course_name      | varchar(32) | YES  |     | NULL    |                |
+| duration_in_year | int(11)     | YES  |     | NULL    |                |
+| fees_per_year    | int(11)     | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> create table marks(student_id int not null,semester int, marks int);
+Query OK, 0 rows affected (0.61 sec)
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   |     | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> alter table marks add constraint foreign key fkm(student_id) references student_information(student_id);
+Query OK, 0 rows affected (1.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   | MUL | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.05 sec)
+ 
+mysql> show tables;
++--------------------------+
+| Tables_in_student_record |
++--------------------------+
+| courses                  |
+| marks                    |
+| student_information      |
++--------------------------+
+3 rows in set (0.00 sec)
+
+mysql> desc courses;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| course_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| course_name      | varchar(32) | YES  |     | NULL    |                |
+| duration_in_year | int(11)     | YES  |     | NULL    |                |
+| fees_per_year    | int(11)     | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> alter table courses auto_increment=100;
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student_information;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| course_id     | int(11)     | NO   | MUL | NULL    |                |
+| student_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(32) | YES  |     | NULL    |                |
+| father_name   | varchar(32) | YES  |     | NULL    |                |
+| Date_of_birth | date        | YES  |     | NULL    |                |
+| Email         | varchar(32) | YES  |     | NULL    |                |
+| contact       | double      | YES  |     | NULL    |                |
+| city          | varchar(32) | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> alter table student_information auto_increment=100;
+Query OK, 0 rows affected (0.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   | MUL | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> 
+mysql> desc courses;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| course_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| course_name      | varchar(32) | YES  |     | NULL    |                |
+| duration_in_year | int(11)     | YES  |     | NULL    |                |
+| fees_per_year    | int(11)     | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into courses(course_name, duration_in_year,fees_per_year)
+    -> values
+    -> ('BTech',4,150000),
+    -> ('BPharm',4,120000),
+    -> ('BSc',3,10000),
+    -> ('BBA',3,75000),
+    -> ('BCA',3,60000),
+    -> ('MTech',2,160000),
+    -> ('MCA',3,100000),
+    -> ('MBA',2,160000);
+Query OK, 8 rows affected (0.18 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> select * from courses;
++-----------+-------------+------------------+---------------+
+| course_id | course_name | duration_in_year | fees_per_year |
++-----------+-------------+------------------+---------------+
+|       100 | BTech       |                4 |        150000 |
+|       101 | BPharm      |                4 |        120000 |
+|       102 | BSc         |                3 |         10000 |
+|       103 | BBA         |                3 |         75000 |
+|       104 | BCA         |                3 |         60000 |
+|       105 | MTech       |                2 |        160000 |
+|       106 | MCA         |                3 |        100000 |
+|       107 | MBA         |                2 |        160000 |
++-----------+-------------+------------------+---------------+
+8 rows in set (0.02 sec)
+
+mysql> desc student_information;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| course_id     | int(11)     | NO   | MUL | NULL    |                |
+| student_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(32) | YES  |     | NULL    |                |
+| father_name   | varchar(32) | YES  |     | NULL    |                |
+| Date_of_birth | date        | YES  |     | NULL    |                |
+| Email         | varchar(32) | YES  |     | NULL    |                |
+| contact       | double      | YES  |     | NULL    |                |
+| city          | varchar(32) | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> insert into student_information (course_id,student_name,father_name,Date_of_birth,Email,contact,city)
+    -> values
+    -> (100,'Rahul','RamSingh','1993-12-05','mail@domain.com',9988557744,'Jaipur'),
+    -> (100,'Akarsh','ManSingh','1995-02-11','user@domain.com',8899665544,'Meerut'),
+    '> (106,'Chetan','Babulal','1994-07-06','userna@domain.com',9988554477,'Delhi'),
+    -> (106,'Pankaj','Ajeet','1993-12-20','username@domain.com',9955664477,'Gazibabad'),
+    -> (106,'Sonal','Hari','1993-08-07','usernam@domain.com',9933224455,'Gazibabad'),
+    -> (107,'shivam','Omkar','1995-04-20','usernamee@domain.com',9955442211,'Meerut');
+Query OK, 6 rows affected (0.12 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> select * from student_information;
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+| course_id | student_id | student_name | father_name | Date_of_birth | Email                | contact    | city      |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+|       100 |        100 | Rahul        | RamSingh    | 1993-12-05    | mail@domain.com      | 9988557744 | Jaipur    |
+|       100 |        101 | Akarsh       | ManSingh    | 1995-02-11    | user@domain.com      | 8899665544 | Meerut    |
+|       106 |        102 | Chetan       | Babulal     | 1994-07-06    | userna@domain.com    | 9988554477 | Delhi     |
+|       106 |        103 | Pankaj       | Ajeet       | 1993-12-20    | username@domain.com  | 9955664477 | Gazibabad |
+|       106 |        104 | Sonal        | Hari        | 1993-08-07    | usernam@domain.com   | 9933224455 | Gazibabad |
+|       107 |        105 | shivam       | Omkar       | 1995-04-20    | usernamee@domain.com | 9955442211 | Meerut    |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   | MUL | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from courses;
++-----------+-------------+------------------+---------------+
+| course_id | course_name | duration_in_year | fees_per_year |
++-----------+-------------+------------------+---------------+
+|       100 | BTech       |                4 |        150000 |
+|       101 | BPharm      |                4 |        120000 |
+|       102 | BSc         |                3 |         10000 |
+|       103 | BBA         |                3 |         75000 |
+|       104 | BCA         |                3 |         60000 |
+|       105 | MTech       |                2 |        160000 |
+|       106 | MCA         |                3 |        100000 |
+|       107 | MBA         |                2 |        160000 |
++-----------+-------------+------------------+---------------+
+8 rows in set (0.00 sec)
+
+mysql> insert into marks(student_id, semester, marks) values 
+    -> (100,1,860),
+    -> (100,2,760),
+    -> (100,3,850),
+    -> (101,1,630),
+    -> (101,2,720),
+    -> (101,3,710),
+    -> (102,1,690),
+    -> (103,1,590),
+    -> (104,1,570),
+    -> (105,1,570),
+    -> (105,2,620),
+    -> (105,3,610);
+Query OK, 12 rows affected (0.15 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> select * from marks;
++------------+----------+-------+
+| student_id | semester | marks |
++------------+----------+-------+
+|        100 |        1 |   860 |
+|        100 |        2 |   760 |
+|        100 |        3 |   850 |
+|        101 |        1 |   630 |
+|        101 |        2 |   720 |
+|        101 |        3 |   710 |
+|        102 |        1 |   690 |
+|        103 |        1 |   590 |
+|        104 |        1 |   570 |
+|        105 |        1 |   570 |
+|        105 |        2 |   620 |
+|        105 |        3 |   610 |
++------------+----------+-------+
+12 rows in set (0.00 sec)
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   | MUL | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select si.course_id, si.student_id,m.semester,m.marks from student_information si inner join marks m where si.student_id=m.student_id;
++-----------+------------+----------+-------+
+| course_id | student_id | semester | marks |
++-----------+------------+----------+-------+
+|       100 |        100 |        1 |   860 |
+|       100 |        100 |        2 |   760 |
+|       100 |        100 |        3 |   850 |
+|       100 |        101 |        1 |   630 |
+|       100 |        101 |        2 |   720 |
+|       100 |        101 |        3 |   710 |
+|       106 |        102 |        1 |   690 |
+|       106 |        103 |        1 |   590 |
+|       106 |        104 |        1 |   570 |
+|       107 |        105 |        1 |   570 |
+|       107 |        105 |        2 |   620 |
+|       107 |        105 |        3 |   610 |
++-----------+------------+----------+-------+
+12 rows in set (0.05 sec)
+
+mysql> select si.course_id, si.student_id,si.student_name,m.semester,m.marks from student_information si inner join marks m where si.student_id=m.student_id;
++-----------+------------+--------------+----------+-------+
+| course_id | student_id | student_name | semester | marks |
++-----------+------------+--------------+----------+-------+
+|       100 |        100 | Rahul        |        1 |   860 |
+|       100 |        100 | Rahul        |        2 |   760 |
+|       100 |        100 | Rahul        |        3 |   850 |
+|       100 |        101 | Akarsh       |        1 |   630 |
+|       100 |        101 | Akarsh       |        2 |   720 |
+|       100 |        101 | Akarsh       |        3 |   710 |
+|       106 |        102 | Chetan       |        1 |   690 |
+|       106 |        103 | Pankaj       |        1 |   590 |
+|       106 |        104 | Sonal        |        1 |   570 |
+|       107 |        105 | shivam       |        1 |   570 |
+|       107 |        105 | shivam       |        2 |   620 |
+|       107 |        105 | shivam       |        3 |   610 |
++-----------+------------+--------------+----------+-------+
+12 rows in set (0.01 sec)
+
+mysql> show tables;
++--------------------------+
+| Tables_in_student_record |
++--------------------------+
+| courses                  |
+| marks                    |
+| student_information      |
++--------------------------+
+3 rows in set (0.01 sec)
+
+mysql> desc courses;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| course_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| course_name      | varchar(32) | YES  |     | NULL    |                |
+| duration_in_year | int(11)     | YES  |     | NULL    |                |
+| fees_per_year    | int(11)     | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> select c.course_id,c.course_name,si.student_id,si.student_name from courses c inner join student_information si where c.course_id=si.course_id;
++-----------+-------------+------------+--------------+
+| course_id | course_name | student_id | student_name |
++-----------+-------------+------------+--------------+
+|       100 | BTech       |        100 | Rahul        |
+|       100 | BTech       |        101 | Akarsh       |
+|       106 | MCA         |        102 | Chetan       |
+|       106 | MCA         |        103 | Pankaj       |
+|       106 | MCA         |        104 | Sonal        |
+|       107 | MBA         |        105 | shivam       |
++-----------+-------------+------------+--------------+
+6 rows in set (0.00 sec)
+
+mysql> select si.student_name from student_information si inner join courses c where c.course_name='BTech';
++--------------+
+| student_name |
++--------------+
+| Rahul        |
+| Akarsh       |
+| Chetan       |
+| Pankaj       |
+| Sonal        |
+| shivam       |
++--------------+
+6 rows in set (0.03 sec)
+
+mysql> select si.student_name from student_information si inner join courses c where c.course_name='BTech' and c.course_id=100;
++--------------+
+| student_name |
++--------------+
+| Rahul        |
+| Akarsh       |
+| Chetan       |
+| Pankaj       |
+| Sonal        |
+| shivam       |
++--------------+
+6 rows in set (0.00 sec)
+
+mysql> select student_name from student_information where course_id=100;
++--------------+
+| student_name |
++--------------+
+| Rahul        |
+| Akarsh       |
++--------------+
+2 rows in set (0.03 sec)
+
+mysql> select c.course_name,si.student_name from student_information si inner join courses c where (c.course_id=si.course_id);
++-------------+--------------+
+| course_name | student_name |
++-------------+--------------+
+| BTech       | Rahul        |
+| BTech       | Akarsh       |
+| MCA         | Chetan       |
+| MCA         | Pankaj       |
+| MCA         | Sonal        |
+| MBA         | shivam       |
++-------------+--------------+
+6 rows in set (0.00 sec)
+
+mysql> select c.course_name,si.student_name from student_information si inner join courses c where (c.course_id=si.course_id) and c.course_name='BTech';
++-------------+--------------+
+| course_name | student_name |
++-------------+--------------+
+| BTech       | Rahul        |
+| BTech       | Akarsh       |
++-------------+--------------+
+2 rows in set (0.01 sec)
+
+mysql> select c.course_id,c.course_name,si.student_id,si.student_name from student_information si inner join courses c where (c.course_id=si.course_id) and c.course_name='BTech';
++-----------+-------------+------------+--------------+
+| course_id | course_name | student_id | student_name |
++-----------+-------------+------------+--------------+
+|       100 | BTech       |        100 | Rahul        |
+|       100 | BTech       |        101 | Akarsh       |
++-----------+-------------+------------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> show tables;
++--------------------------+
+| Tables_in_student_record |
++--------------------------+
+| courses                  |
+| marks                    |
+| student_information      |
++--------------------------+
+3 rows in set (0.05 sec)
+
+mysql> desc courses;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| course_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| course_name      | varchar(32) | YES  |     | NULL    |                |
+| duration_in_year | int(11)     | YES  |     | NULL    |                |
+| fees_per_year    | int(11)     | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   | MUL | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc student_information;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| course_id     | int(11)     | NO   | MUL | NULL    |                |
+| student_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(32) | YES  |     | NULL    |                |
+| father_name   | varchar(32) | YES  |     | NULL    |                |
+| Date_of_birth | date        | YES  |     | NULL    |                |
+| Email         | varchar(32) | YES  |     | NULL    |                |
+| contact       | double      | YES  |     | NULL    |                |
+| city          | varchar(32) | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| employees          |
+| mysql              |
+| performance_schema |
+| student_record     |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use student_record;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++--------------------------+
+| Tables_in_student_record |
++--------------------------+
+| courses                  |
+| marks                    |
+| student_information      |
++--------------------------+
+3 rows in set (0.00 sec)
+
+mysql> desc courses;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| course_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| course_name      | varchar(32) | YES  |     | NULL    |                |
+| duration_in_year | int(11)     | YES  |     | NULL    |                |
+| fees_per_year    | int(11)     | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> desc student_information;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| course_id     | int(11)     | NO   | MUL | NULL    |                |
+| student_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(32) | YES  |     | NULL    |                |
+| father_name   | varchar(32) | YES  |     | NULL    |                |
+| Date_of_birth | date        | YES  |     | NULL    |                |
+| Email         | varchar(32) | YES  |     | NULL    |                |
+| contact       | double      | YES  |     | NULL    |                |
+| city          | varchar(32) | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   | MUL | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> alter table student_information alter column city set default 'Faridabad';
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc  student_information;
++---------------+-------------+------+-----+-----------+----------------+
+| Field         | Type        | Null | Key | Default   | Extra          |
++---------------+-------------+------+-----+-----------+----------------+
+| course_id     | int(11)     | NO   | MUL | NULL      |                |
+| student_id    | int(11)     | NO   | PRI | NULL      | auto_increment |
+| student_name  | varchar(32) | YES  |     | NULL      |                |
+| father_name   | varchar(32) | YES  |     | NULL      |                |
+| Date_of_birth | date        | YES  |     | NULL      |                |
+| Email         | varchar(32) | YES  |     | NULL      |                |
+| contact       | double      | YES  |     | NULL      |                |
+| city          | varchar(32) | YES  |     | Faridabad |                |
++---------------+-------------+------+-----+-----------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> show tables;
++--------------------------+
+| Tables_in_student_record |
++--------------------------+
+| courses                  |
+| marks                    |
+| student_information      |
++--------------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from courses;
++-----------+-------------+------------------+---------------+
+| course_id | course_name | duration_in_year | fees_per_year |
++-----------+-------------+------------------+---------------+
+|       100 | BTech       |                4 |        150000 |
+|       101 | BPharm      |                4 |        120000 |
+|       102 | BSc         |                3 |         10000 |
+|       103 | BBA         |                3 |         75000 |
+|       104 | BCA         |                3 |         60000 |
+|       105 | MTech       |                2 |        160000 |
+|       106 | MCA         |                3 |        100000 |
+|       107 | MBA         |                2 |        160000 |
++-----------+-------------+------------------+---------------+
+8 rows in set (0.00 sec)
+
+mysql> select * from student_information
+    -> ;
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+| course_id | student_id | student_name | father_name | Date_of_birth | Email                | contact    | city      |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+|       100 |        100 | Rahul        | RamSingh    | 1993-12-05    | mail@domain.com      | 9988557744 | Jaipur    |
+|       100 |        101 | Akarsh       | ManSingh    | 1995-02-11    | user@domain.com      | 8899665544 | Meerut    |
+|       106 |        102 | Chetan       | Babulal     | 1994-07-06    | userna@domain.com    | 9988554477 | Delhi     |
+|       106 |        103 | Pankaj       | Ajeet       | 1993-12-20    | username@domain.com  | 9955664477 | Gazibabad |
+|       106 |        104 | Sonal        | Hari        | 1993-08-07    | usernam@domain.com   | 9933224455 | Gazibabad |
+|       107 |        105 | shivam       | Omkar       | 1995-04-20    | usernamee@domain.com | 9955442211 | Meerut    |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+6 rows in set (0.04 sec)
+
+mysql> select * from marks;
++------------+----------+-------+
+| student_id | semester | marks |
++------------+----------+-------+
+|        100 |        1 |   860 |
+|        100 |        2 |   760 |
+|        100 |        3 |   850 |
+|        101 |        1 |   630 |
+|        101 |        2 |   720 |
+|        101 |        3 |   710 |
+|        102 |        1 |   690 |
+|        103 |        1 |   590 |
+|        104 |        1 |   570 |
+|        105 |        1 |   570 |
+|        105 |        2 |   620 |
+|        105 |        3 |   610 |
++------------+----------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select si.student_id, si.student_name, m.marks from student_information si natural join marks m;
++------------+--------------+-------+
+| student_id | student_name | marks |
++------------+--------------+-------+
+|        100 | Rahul        |   860 |
+|        100 | Rahul        |   760 |
+|        100 | Rahul        |   850 |
+|        101 | Akarsh       |   630 |
+|        101 | Akarsh       |   720 |
+|        101 | Akarsh       |   710 |
+|        102 | Chetan       |   690 |
+|        103 | Pankaj       |   590 |
+|        104 | Sonal        |   570 |
+|        105 | shivam       |   570 |
+|        105 | shivam       |   620 |
+|        105 | shivam       |   610 |
++------------+--------------+-------+
+12 rows in set (0.08 sec)
+
+mysql> select si.student_id, si.student_name, m.marks from student_information si natural join marks m where marks>500;
++------------+--------------+-------+
+| student_id | student_name | marks |
++------------+--------------+-------+
+|        100 | Rahul        |   860 |
+|        100 | Rahul        |   760 |
+|        100 | Rahul        |   850 |
+|        101 | Akarsh       |   630 |
+|        101 | Akarsh       |   720 |
+|        101 | Akarsh       |   710 |
+|        102 | Chetan       |   690 |
+|        103 | Pankaj       |   590 |
+|        104 | Sonal        |   570 |
+|        105 | shivam       |   570 |
+|        105 | shivam       |   620 |
+|        105 | shivam       |   610 |
++------------+--------------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select si.student_id, si.student_name, m.marks from student_information si inner join marks m where marks>500;
++------------+--------------+-------+
+| student_id | student_name | marks |
++------------+--------------+-------+
+|        100 | Rahul        |   860 |
+|        100 | Rahul        |   760 |
+|        100 | Rahul        |   850 |
+|        100 | Rahul        |   630 |
+|        100 | Rahul        |   720 |
+|        100 | Rahul        |   710 |
+|        100 | Rahul        |   690 |
+|        100 | Rahul        |   590 |
+|        100 | Rahul        |   570 |
+|        100 | Rahul        |   570 |
+|        100 | Rahul        |   620 |
+|        100 | Rahul        |   610 |
+|        101 | Akarsh       |   860 |
+|        101 | Akarsh       |   760 |
+|        101 | Akarsh       |   850 |
+|        101 | Akarsh       |   630 |
+|        101 | Akarsh       |   720 |
+|        101 | Akarsh       |   710 |
+|        101 | Akarsh       |   690 |
+|        101 | Akarsh       |   590 |
+|        101 | Akarsh       |   570 |
+|        101 | Akarsh       |   570 |
+|        101 | Akarsh       |   620 |
+|        101 | Akarsh       |   610 |
+|        102 | Chetan       |   860 |
+|        102 | Chetan       |   760 |
+|        102 | Chetan       |   850 |
+|        102 | Chetan       |   630 |
+|        102 | Chetan       |   720 |
+|        102 | Chetan       |   710 |
+|        102 | Chetan       |   690 |
+|        102 | Chetan       |   590 |
+|        102 | Chetan       |   570 |
+|        102 | Chetan       |   570 |
+|        102 | Chetan       |   620 |
+|        102 | Chetan       |   610 |
+|        103 | Pankaj       |   860 |
+|        103 | Pankaj       |   760 |
+|        103 | Pankaj       |   850 |
+|        103 | Pankaj       |   630 |
+|        103 | Pankaj       |   720 |
+|        103 | Pankaj       |   710 |
+|        103 | Pankaj       |   690 |
+|        103 | Pankaj       |   590 |
+|        103 | Pankaj       |   570 |
+|        103 | Pankaj       |   570 |
+|        103 | Pankaj       |   620 |
+|        103 | Pankaj       |   610 |
+|        104 | Sonal        |   860 |
+|        104 | Sonal        |   760 |
+|        104 | Sonal        |   850 |
+|        104 | Sonal        |   630 |
+|        104 | Sonal        |   720 |
+|        104 | Sonal        |   710 |
+|        104 | Sonal        |   690 |
+|        104 | Sonal        |   590 |
+|        104 | Sonal        |   570 |
+|        104 | Sonal        |   570 |
+|        104 | Sonal        |   620 |
+|        104 | Sonal        |   610 |
+|        105 | shivam       |   860 |
+|        105 | shivam       |   760 |
+|        105 | shivam       |   850 |
+|        105 | shivam       |   630 |
+|        105 | shivam       |   720 |
+|        105 | shivam       |   710 |
+|        105 | shivam       |   690 |
+|        105 | shivam       |   590 |
+|        105 | shivam       |   570 |
+|        105 | shivam       |   570 |
+|        105 | shivam       |   620 |
+|        105 | shivam       |   610 |
++------------+--------------+-------+
+72 rows in set (0.00 sec)
+
+mysql> select si.student_id, si.student_name from student_information si inner join marks m where marks>500;
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        102 | Chetan       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        103 | Pankaj       |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        104 | Sonal        |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
++------------+--------------+
+72 rows in set (0.00 sec)
+
+mysql> select si.student_id, si.student_name from student_information si inner join marks m where (si.student_id=m.student_id) and marks>500;
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        100 | Rahul        |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        101 | Akarsh       |
+|        102 | Chetan       |
+|        103 | Pankaj       |
+|        104 | Sonal        |
+|        105 | shivam       |
+|        105 | shivam       |
+|        105 | shivam       |
++------------+--------------+
+12 rows in set (0.00 sec)
+
+mysql> select si.student_id, si.student_name m.marks from student_information si inner join marks m where (si.student_id=m.student_id) and marks>500;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.marks from student_information si inner join marks m where (si.student_id=m.stu' at line 1
+mysql> select si.student_id, si.student_name, m.marks from student_information si inner join marks m where (si.student_id=m.student_id) and marks>500;
++------------+--------------+-------+
+| student_id | student_name | marks |
++------------+--------------+-------+
+|        100 | Rahul        |   860 |
+|        100 | Rahul        |   760 |
+|        100 | Rahul        |   850 |
+|        101 | Akarsh       |   630 |
+|        101 | Akarsh       |   720 |
+|        101 | Akarsh       |   710 |
+|        102 | Chetan       |   690 |
+|        103 | Pankaj       |   590 |
+|        104 | Sonal        |   570 |
+|        105 | shivam       |   570 |
+|        105 | shivam       |   620 |
+|        105 | shivam       |   610 |
++------------+--------------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select si.student_id, si.student_name, m.marks from student_information si inner join marks m where (si.student_id=m.student_id) and marks>700;
++------------+--------------+-------+
+| student_id | student_name | marks |
++------------+--------------+-------+
+|        100 | Rahul        |   860 |
+|        100 | Rahul        |   760 |
+|        100 | Rahul        |   850 |
+|        101 | Akarsh       |   720 |
+|        101 | Akarsh       |   710 |
++------------+--------------+-------+
+5 rows in set (0.01 sec)
+
+mysql> select si.student_id, si.student_name, m.marks,m.semester from student_information si inner join marks m where (si.student_id=m.student_id) and marks>700;
++------------+--------------+-------+----------+
+| student_id | student_name | marks | semester |
++------------+--------------+-------+----------+
+|        100 | Rahul        |   860 |        1 |
+|        100 | Rahul        |   760 |        2 |
+|        100 | Rahul        |   850 |        3 |
+|        101 | Akarsh       |   720 |        2 |
+|        101 | Akarsh       |   710 |        3 |
++------------+--------------+-------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from student_information
+    -> ;
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+| course_id | student_id | student_name | father_name | Date_of_birth | Email                | contact    | city      |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+|       100 |        100 | Rahul        | RamSingh    | 1993-12-05    | mail@domain.com      | 9988557744 | Jaipur    |
+|       100 |        101 | Akarsh       | ManSingh    | 1995-02-11    | user@domain.com      | 8899665544 | Meerut    |
+|       106 |        102 | Chetan       | Babulal     | 1994-07-06    | userna@domain.com    | 9988554477 | Delhi     |
+|       106 |        103 | Pankaj       | Ajeet       | 1993-12-20    | username@domain.com  | 9955664477 | Gazibabad |
+|       106 |        104 | Sonal        | Hari        | 1993-08-07    | usernam@domain.com   | 9933224455 | Gazibabad |
+|       107 |        105 | shivam       | Omkar       | 1995-04-20    | usernamee@domain.com | 9955442211 | Meerut    |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql>  desc courses;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| course_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| course_name      | varchar(32) | YES  |     | NULL    |                |
+| duration_in_year | int(11)     | YES  |     | NULL    |                |
+| fees_per_year    | int(11)     | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> desc student_information;
++---------------+-------------+------+-----+-----------+----------------+
+| Field         | Type        | Null | Key | Default   | Extra          |
++---------------+-------------+------+-----+-----------+----------------+
+| course_id     | int(11)     | NO   | MUL | NULL      |                |
+| student_id    | int(11)     | NO   | PRI | NULL      | auto_increment |
+| student_name  | varchar(32) | YES  |     | NULL      |                |
+| father_name   | varchar(32) | YES  |     | NULL      |                |
+| Date_of_birth | date        | YES  |     | NULL      |                |
+| Email         | varchar(32) | YES  |     | NULL      |                |
+| contact       | double      | YES  |     | NULL      |                |
+| city          | varchar(32) | YES  |     | Faridabad |                |
++---------------+-------------+------+-----+-----------+----------------+
+8 rows in set (0.01 sec)
+
+mysql> desc marks;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| student_id | int(11) | NO   | MUL | NULL    |       |
+| semester   | int(11) | YES  |     | NULL    |       |
+| marks      | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select a.course_id,a.course_name,b.student_id,b.student_name,c.semester,c.marks from courses a,student_information b, marks c where (a.course_id=b.course_id) and (b.student_id=c.student_id);
++-----------+-------------+------------+--------------+----------+-------+
+| course_id | course_name | student_id | student_name | semester | marks |
++-----------+-------------+------------+--------------+----------+-------+
+|       100 | BTech       |        100 | Rahul        |        1 |   860 |
+|       100 | BTech       |        100 | Rahul        |        2 |   760 |
+|       100 | BTech       |        100 | Rahul        |        3 |   850 |
+|       100 | BTech       |        101 | Akarsh       |        1 |   630 |
+|       100 | BTech       |        101 | Akarsh       |        2 |   720 |
+|       100 | BTech       |        101 | Akarsh       |        3 |   710 |
+|       106 | MCA         |        102 | Chetan       |        1 |   690 |
+|       106 | MCA         |        103 | Pankaj       |        1 |   590 |
+|       106 | MCA         |        104 | Sonal        |        1 |   570 |
+|       107 | MBA         |        105 | shivam       |        1 |   570 |
+|       107 | MBA         |        105 | shivam       |        2 |   620 |
+|       107 | MBA         |        105 | shivam       |        3 |   610 |
++-----------+-------------+------------+--------------+----------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select * from student_information;
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+| course_id | student_id | student_name | father_name | Date_of_birth | Email                | contact    | city      |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+|       100 |        100 | Rahul        | RamSingh    | 1993-12-05    | mail@domain.com      | 9988557744 | Jaipur    |
+|       100 |        101 | Akarsh       | ManSingh    | 1995-02-11    | user@domain.com      | 8899665544 | Meerut    |
+|       106 |        102 | Chetan       | Babulal     | 1994-07-06    | userna@domain.com    | 9988554477 | Delhi     |
+|       106 |        103 | Pankaj       | Ajeet       | 1993-12-20    | username@domain.com  | 9955664477 | Gazibabad |
+|       106 |        104 | Sonal        | Hari        | 1993-08-07    | usernam@domain.com   | 9933224455 | Gazibabad |
+|       107 |        105 | shivam       | Omkar       | 1995-04-20    | usernamee@domain.com | 9955442211 | Meerut    |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> select a.course_id,a.course_name,b.student_id,b.student_name,c.semester,c.marks from courses a,student_information b, marks c where (a.course_id=b.course_id) and (b.student_id=c.student_id) and marks>700;
++-----------+-------------+------------+--------------+----------+-------+
+| course_id | course_name | student_id | student_name | semester | marks |
++-----------+-------------+------------+--------------+----------+-------+
+|       100 | BTech       |        100 | Rahul        |        1 |   860 |
+|       100 | BTech       |        100 | Rahul        |        2 |   760 |
+|       100 | BTech       |        100 | Rahul        |        3 |   850 |
+|       100 | BTech       |        101 | Akarsh       |        2 |   720 |
+|       100 | BTech       |        101 | Akarsh       |        3 |   710 |
++-----------+-------------+------------+--------------+----------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select a.course_id,a.course_name,b.student_id,b.student_name,c.semester,c.marks from courses a,student_information b, marks c where (a.course_id=b.course_id) and (b.student_id=c.student_id) and marks>600;
++-----------+-------------+------------+--------------+----------+-------+
+| course_id | course_name | student_id | student_name | semester | marks |
++-----------+-------------+------------+--------------+----------+-------+
+|       100 | BTech       |        100 | Rahul        |        1 |   860 |
+|       100 | BTech       |        100 | Rahul        |        2 |   760 |
+|       100 | BTech       |        100 | Rahul        |        3 |   850 |
+|       100 | BTech       |        101 | Akarsh       |        1 |   630 |
+|       100 | BTech       |        101 | Akarsh       |        2 |   720 |
+|       100 | BTech       |        101 | Akarsh       |        3 |   710 |
+|       106 | MCA         |        102 | Chetan       |        1 |   690 |
+|       107 | MBA         |        105 | shivam       |        2 |   620 |
+|       107 | MBA         |        105 | shivam       |        3 |   610 |
++-----------+-------------+------------+--------------+----------+-------+
+9 rows in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum
+    -> (marks) from student_information a, marks where student_id=100;
+ERROR 1630 (42000): FUNCTION student_record.sum does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a, marks where student_id=100;
+ERROR 1052 (23000): Column 'student_id' in where clause is ambiguous
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a, marks b where b.student_id=100;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'student_record.a.student_id'; this is incompatible with sql_mode=only_full_group_by
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a, marks b where b.student_id=100 group by student_name;;
+ERROR 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'student_record.a.student_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+ERROR: 
+No query specified
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a, marks b where b.student_id=100 group by student_name;
+ERROR 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'student_record.a.student_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+mysql> select sum(marks) from marks where student_id=100 group by student_name;
+ERROR 1054 (42S22): Unknown column 'student_name' in 'group statement'
+mysql> select sum(marks) from marks, student_information a where student_id=100 group by a.student_name;
+ERROR 1052 (23000): Column 'student_id' in where clause is ambiguous
+mysql> select sum(marks) from marks, student_information a where a.student_id=100 group by a.student_name;
++------------+
+| sum(marks) |
++------------+
+|       8180 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select * from marks;
++------------+----------+-------+
+| student_id | semester | marks |
++------------+----------+-------+
+|        100 |        1 |   860 |
+|        100 |        2 |   760 |
+|        100 |        3 |   850 |
+|        101 |        1 |   630 |
+|        101 |        2 |   720 |
+|        101 |        3 |   710 |
+|        102 |        1 |   690 |
+|        103 |        1 |   590 |
+|        104 |        1 |   570 |
+|        105 |        1 |   570 |
+|        105 |        2 |   620 |
+|        105 |        3 |   610 |
++------------+----------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select sum(marks) from marks where student_id=100;
++------------+
+| sum(marks) |
++------------+
+|       2470 |
++------------+
+1 row in set (0.03 sec)
+
+mysql> select a.student_name,b.sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and student_id=100;
+ERROR 1630 (42000): FUNCTION b.sum does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+mysql> select a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and student_id=100;
+ERROR 1052 (23000): Column 'student_id' in where clause is ambiguous
+mysql> select a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=100;
++--------------+------------+
+| student_name | sum(marks) |
++--------------+------------+
+| Rahul        |       2470 |
++--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select * from student_information;
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+| course_id | student_id | student_name | father_name | Date_of_birth | Email                | contact    | city      |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+|       100 |        100 | Rahul        | RamSingh    | 1993-12-05    | mail@domain.com      | 9988557744 | Jaipur    |
+|       100 |        101 | Akarsh       | ManSingh    | 1995-02-11    | user@domain.com      | 8899665544 | Meerut    |
+|       106 |        102 | Chetan       | Babulal     | 1994-07-06    | userna@domain.com    | 9988554477 | Delhi     |
+|       106 |        103 | Pankaj       | Ajeet       | 1993-12-20    | username@domain.com  | 9955664477 | Gazibabad |
+|       106 |        104 | Sonal        | Hari        | 1993-08-07    | usernam@domain.com   | 9933224455 | Gazibabad |
+|       107 |        105 | shivam       | Omkar       | 1995-04-20    | usernamee@domain.com | 9955442211 | Meerut    |
++-----------+------------+--------------+-------------+---------------+----------------------+------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from marks;
++------------+----------+-------+
+| student_id | semester | marks |
++------------+----------+-------+
+|        100 |        1 |   860 |
+|        100 |        2 |   760 |
+|        100 |        3 |   850 |
+|        101 |        1 |   630 |
+|        101 |        2 |   720 |
+|        101 |        3 |   710 |
+|        102 |        1 |   690 |
+|        103 |        1 |   590 |
+|        104 |        1 |   570 |
+|        105 |        1 |   570 |
+|        105 |        2 |   620 |
+|        105 |        3 |   610 |
++------------+----------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=100; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|        100 | Rahul        |       2470 |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=100 and b.student_id=101;
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|       NULL | NULL         |       NULL |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=100; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|        100 | Rahul        |       2470 |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=101; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|        101 | Akarsh       |       2060 |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=102; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|        102 | Chetan       |        690 |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=103; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|        103 | Pankaj       |        590 |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=104; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|        104 | Sonal        |        570 |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=105; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|        105 | shivam       |       1800 |
++------------+--------------+------------+
+1 row in set (0.01 sec)
+
+mysql> select a.student_id,a.student_name,sum(marks) from student_information a,marks b where (a.student_id=b.student_id) and b.student_id=106; 
++------------+--------------+------------+
+| student_id | student_name | sum(marks) |
++------------+--------------+------------+
+|       NULL | NULL         |       NULL |
++------------+--------------+------------+
+1 row in set (0.00 sec)
+
+mysql> create table time_example(Time time);
+Query OK, 0 rows affected (0.30 sec)
+
+mysql> insert into time_example('02:36:40');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''02:36:40')' at line 1
+mysql> insert into time_example(02:36:40);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '02:36:40)' at line 1
+mysql> insert into time_example values(02:36:40);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':36:40)' at line 1
+mysql> insert into time_example values('02:36:40');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from time_example;
++----------+
+| Time     |
++----------+
+| 02:36:40 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> drop table time;
+ERROR 1051 (42S02): Unknown table 'student_record.time'
+mysql> drop table time_example;
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> show tables;
++--------------------------+
+| Tables_in_student_record |
++--------------------------+
+| courses                  |
+| marks                    |
+| student_information      |
++--------------------------+
+3 rows in set (0.00 sec)
+
+mysql> 
+mysql> use employees;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_employees  |
++----------------------+
+| employee_information |
+| employee_salary      |
++----------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc employee_information;
++---------------------+-------------+------+-----+---------+----------------+
+| Field               | Type        | Null | Key | Default | Extra          |
++---------------------+-------------+------+-----+---------+----------------+
+| employee_id         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| employee_name       | varchar(32) | YES  |     | NULL    |                |
+| employee_department | varchar(32) | YES  |     | NULL    |                |
+| employee_city       | varchar(32) | YES  |     | NULL    |                |
+| employee_contact    | double      | YES  |     | NULL    |                |
++---------------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from employee_information;
++-------------+---------------+---------------------+---------------+------------------+
+| employee_id | employee_name | employee_department | employee_city | employee_contact |
++-------------+---------------+---------------------+---------------+------------------+
+|         100 | Amit          | Admin               | Jaipur        |       9988556644 |
+|         101 | Vijay         | Tech                | Kanpur        |       1144225577 |
+|         102 | Rohit         | Tech                | Meerut        |       9955886655 |
+|         103 | Pankaj        | Tech                | Gaziababad    |       6688559944 |
+|         104 | Nitin         | Sales               | Delhi         |       7788559966 |
+|         105 | Rashi         | HR                  | Meerut        |       9950786655 |
++-------------+---------------+---------------------+---------------+------------------+
+6 rows in set (0.00 sec)
+
+mysql> desc employee_salary;
++----------------+---------+------+-----+---------+-------+
+| Field          | Type    | Null | Key | Default | Extra |
++----------------+---------+------+-----+---------+-------+
+| employee_id    | int(11) | YES  | MUL | NULL    |       |
+| date_of_joinig | date    | YES  |     | NULL    |       |
+| salary         | int(11) | YES  |     | NULL    |       |
++----------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee_salary;
++-------------+----------------+--------+
+| employee_id | date_of_joinig | salary |
++-------------+----------------+--------+
+|         100 | 2015-02-02     |  24000 |
+|         101 | 2015-06-01     |  20000 |
+|         102 | 2012-12-02     |  30000 |
+|         103 | 2010-12-26     |  45000 |
+|         104 | 2016-11-25     |  20000 |
+|         105 | 2017-01-25     |  15000 |
++-------------+----------------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select count(employee_department) form employee_information where employee_department='Tech';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'employee_information where employee_department='Tech'' at line 1
+mysql> select count(employee_department) from employee_information where employee_department='Tech';
++----------------------------+
+| count(employee_department) |
++----------------------------+
+|                          3 |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(salary) from employee_salary where employee_department='Tech';
+ERROR 1054 (42S22): Unknown column 'employee_department' in 'where clause'
+mysql> select avg(salary) from employee_salary a, employee_information b where (a.employee_id=b.employee_id) and employee_department='Tech';
++-------------+
+| avg(salary) |
++-------------+
+|  31666.6667 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee_information;
++-------------+---------------+---------------------+---------------+------------------+
+| employee_id | employee_name | employee_department | employee_city | employee_contact |
++-------------+---------------+---------------------+---------------+------------------+
+|         100 | Amit          | Admin               | Jaipur        |       9988556644 |
+|         101 | Vijay         | Tech                | Kanpur        |       1144225577 |
+|         102 | Rohit         | Tech                | Meerut        |       9955886655 |
+|         103 | Pankaj        | Tech                | Gaziababad    |       6688559944 |
+|         104 | Nitin         | Sales               | Delhi         |       7788559966 |
+|         105 | Rashi         | HR                  | Meerut        |       9950786655 |
++-------------+---------------+---------------------+---------------+------------------+
+6 rows in set (0.00 sec)
+
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.salary from employee_information a,emplooyee_salary b where a.employee_id=b.employee_id;
+ERROR 1146 (42S02): Table 'employees.emplooyee_salary' doesn't exist
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.salary from employee_information a,employee_salary b where a.employee_id=b.employee_id;
++-------------+---------------+---------------------+--------+
+| employee_id | employee_name | employee_department | salary |
++-------------+---------------+---------------------+--------+
+|         100 | Amit          | Admin               |  24000 |
+|         101 | Vijay         | Tech                |  20000 |
+|         102 | Rohit         | Tech                |  30000 |
+|         103 | Pankaj        | Tech                |  45000 |
+|         104 | Nitin         | Sales               |  20000 |
+|         105 | Rashi         | HR                  |  15000 |
++-------------+---------------+---------------------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.salary from employee_information a,employee_salary b where (a.employee_id=b.employee_id) and a.employee_department='Tech';
++-------------+---------------+---------------------+--------+
+| employee_id | employee_name | employee_department | salary |
++-------------+---------------+---------------------+--------+
+|         101 | Vijay         | Tech                |  20000 |
+|         102 | Rohit         | Tech                |  30000 |
+|         103 | Pankaj        | Tech                |  45000 |
++-------------+---------------+---------------------+--------+
+3 rows in set (0.01 sec)
+
+mysql> select avg(salary) as Average_Salary_Tech_Department from employee_salary a, employee_information b where (a.employee_id=b.employee_id) and employee_
++--------------------------------+
+| Average_Salary_Tech_Department |
++--------------------------------+
+|                     31666.6667 |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(salary) from employee_salary;
++-------------+
+| sum(salary) |
++-------------+
+|      154000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(salary) from employee_information where employee_department='Admin' and employee_department='Sales' and employee_department='HR';
+ERROR 1054 (42S22): Unknown column 'salary' in 'field list'
+mysql> select sum(salary) from employee_information ei,employee_salary es where ei.employee_department='Admin' and ei.employee_department='Sales' and ei.employee_
++-------------+
+| sum(salary) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(salary) from employee_information ei,employee_salary es where ei.employee_department='Admin' and ei.employee_department='Sales' and ei.employee_department='HR';
++-------------+
+| sum(salary) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(salary) from employee_information ei,employee_salary es where (ei.employee_department='Admin' and ei.employee_department='Sales') and ei.employee_department='HR';
++-------------+
+| sum(salary) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(salary) from employee_information ei,employee_salary es where (ei.employee_department='Admin' and ei.employee_department='Sales') and ei.employee_department='HR' and (ei.employee_id=es.employee_id);
++-------------+
+| sum(salary) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select sum(salary) from employee_information ei,employee_salary es where (ei.employee_id=es.employee_id) and (ei.employee_department='Admin' and ei.employee_
++-------------+
+| sum(salary) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(salary) from employee_information ei,employee_salary es where (ei.employee_id=es.employee_id) and (ei.employee_department='Admin' and ei.employee_department='Sales' and ei.employee_department='HR)';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select sum(salary) from employee_information ei,employee_salary es where (ei.employee_id=es.employee_id) and (ei.employee_department='Admin' and ei.employee_department='Sales' and ei.employee_department='HR');
++-------------+
+| sum(salary) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(salary) from employee_information ei,employee_salary es where (ei.employee_id=es.employee_id) and (ei.employee_department='Admin' and ei.employee_department='Sales');
++-------------+
+| sum(salary) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.employee_salary from employee_information a,employee_salary where (a.employee_id=b.employee_id) and a.employee_department not in 'Tech';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Tech'' at line 1
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.employee_salary from employee_information a,employee_salary where (a.employee_id=b.employee_id) and a.employee_department !='Tech';
+ERROR 1054 (42S22): Unknown column 'b.employee_salary' in 'field list'
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.employee_salary from employee_information a,employee_salary b where (a.employee_id=b.employee_id) and a.employee_department !='Tech';
+ERROR 1054 (42S22): Unknown column 'b.employee_salary' in 'field list'
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.salary from employee_information a,employee_salary b where (a.employee_id=b.employee_id) and a.employee_department !='Tech';
++-------------+---------------+---------------------+--------+
+| employee_id | employee_name | employee_department | salary |
++-------------+---------------+---------------------+--------+
+|         100 | Amit          | Admin               |  24000 |
+|         104 | Nitin         | Sales               |  20000 |
+|         105 | Rashi         | HR                  |  15000 |
++-------------+---------------+---------------------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.salary from employee_information a,employee_salary b where (a.employee_id=b.employee_id) and a.employee_department not in'Tech';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Tech'' at line 1
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.salary from employee_information a,employee_salary b where (a.employee_id=b.employee_id) and a.employee_department not in 'Tech';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Tech'' at line 1
+mysql> select a.employee_id,a.employee_name,a.employee_department,b.salary from employee_information a,employee_salary b where (a.employee_id=b.employee_id) and a.employee_department !='Tech';
++-------------+---------------+---------------------+--------+
+| employee_id | employee_name | employee_department | salary |
++-------------+---------------+---------------------+--------+
+|         100 | Amit          | Admin               |  24000 |
+|         104 | Nitin         | Sales               |  20000 |
+|         105 | Rashi         | HR                  |  15000 |
++-------------+---------------+---------------------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select sum(salary) from employee_information a,employee_salary b where (a.employee_information=b.employee_salary) and employee_department!='Tech';
+ERROR 1054 (42S22): Unknown column 'a.employee_information' in 'where clause'
+mysql> select sum(salary) from employee_information a,employee_salary b where (a.employee_information=b.employee_salary) and a.employee_department!='Tech';
+ERROR 1054 (42S22): Unknown column 'a.employee_information' in 'where clause'
+mysql> select sum(salary) from employee_information a, employee_salary b where (a.employee_id=b.employee_id) and a.employee_department!='Tech'; 
++-------------+
+| sum(salary) |
++-------------+
+|       59000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> show tables;
++----------------------+
+| Tables_in_employees  |
++----------------------+
+| employee_information |
+| employee_salary      |
++----------------------+
+2 rows in set (0.00 sec)
+
+ 
+
