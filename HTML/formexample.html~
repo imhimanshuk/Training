@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+	<html>
+	<body>
+	<form>
+	Name: <input type="text" name="name" placeholder="First name"><br>
+	<input type="radio" name="gender" value="male"> Male
+	<input type="radio" name="gender" value="female"> Female<br>
+	Cars:	
+	<select name="cars">
+	<option value="volvo">Volvo</option>
+	<option value="ford">Ford</option>
+	<option value="fiat">Fiat</option>
+	<option value="audi">Audi</option>
+	</select><br>
+	Address:	<br>
+	<textarea name="note"></textarea><br>
+	<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+	<input type="button" value="OK">
+	</form>
+	</body>
+	</html>
