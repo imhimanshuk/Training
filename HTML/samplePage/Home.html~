@@ -1,0 +1,41 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>Login</title>
+		<style type="text/css">
+			div#d1
+			{  
+				width:100%;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 10px;
+				margin-top: auto;
+				margin-left:2px; 
+				background-image:url("bluehd.jpeg");
+			}
+			div#d2
+			{
+				width:70%;
+				height:100%;
+				background-image:url("101.jpg"); 
+			}
+			h4#hid
+			{
+				align:center;
+				 			
+			}
+		</style>
+	</head>
+	<body>
+		<form name="form1">
+			<div id="d1">
+			<h1>Sample Page</h1>
+			<h4 id="hid">Login:<input type="text" name="username" value="username" placeholder="UserName"></h4>
+			</div>
+			<div id="d2">
+			
+			</div>			
+		</form>
+	</body>
+</html>
