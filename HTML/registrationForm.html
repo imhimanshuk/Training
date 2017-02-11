@@ -1,0 +1,83 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>Example</title>
+		<style type="text/css">
+			header
+			{
+				text-align: center;
+			}
+			fieldset
+			{
+				display: block;
+				margin-left:200px; 
+				margin-right:200px; 
+    			padding-bottom: 0.625em;
+    			padding-left: 0.75em;
+    			padding-right: 0.75em;
+    			border: 2px groove (internal value);
+    		}
+    		
+    		table
+   		{
+    			
+    		}
+    		
+		</style>
+	</head>
+	<body>
+	<header><h3>Registration Form</h3></header>
+		<form>
+			<fieldset>
+				<legend>Personal Information</legend>
+				<table align="center">
+				<tr><td><label for="name">First Name</label></td><td><input type="text" name="text1" placeholder="First Name"></td></tr>
+				<tr><td>Middle Name</td><td><input type="text" name="text2" placeholder="Middle Name"></td></tr>
+				<tr><td>Last Name</td><td><input type="text" name="text3" placeholder="Last Name"></td></tr>
+				<tr><td>Gender</td>
+				<td><input type="radio" name="gender" value="Male">Male</td>
+				<td><input type="radio" name="gender" value="Female">Female</td></tr>
+				<tr><td>Mobile Number</td><td><input type="text" name="number" maxlength="10" placeholder="Mobile Number"></td></tr>
+				<tr><td>Email</td><td><input type="email" name="email" placeholder="Email"></td></tr>		
+				<tr><td>Country</td><td><input type="text" name="text4" placeholder="Country"	></td></tr>
+				<tr><td>State</td><td><select name="State">
+				<option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
+				<option>Chhattisgarh</option><option>Goa</option><option>Gujrat</option><option>Haryana</option>
+				<option>Himachl Pradesh</option>	<option>Jammu & Kashmir</option><option>Jharkhand</option>
+				<option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option>
+				<option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option>
+				<option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option>
+				<option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option>
+				<option>UttraKhand</option><option>West Bengal</option>
+				</td></tr>
+				<tr><td>City</td><td><input type="text" name="text5" placeholder="City"></td></tr>
+				<tr><td>Address</td><td><textarea rows="4" cols="35"></textarea></td></tr>				
+				</table>
+			</fieldset>
+			<fieldset>
+			<legend>Parent/Guardian Detail</legend>
+			<table align="center" >
+			<tr><td><label for="name">Parent/Guardian Name</label></td><td><input type="text" name="text6" placeholder="Parent/Guardian Name"></td></tr>
+			<tr><td>Mobile Number</td><td><input type="text" name="number" maxlength="10" placeholder="Mobile Number"></td></tr>			
+			<tr><td>Country</td><td><input type="text" name="text4" placeholder="Country"	></td></tr>
+				<tr><td>State</td><td><select name="State">
+				<option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
+				<option>Chhattisgarh</option><option>Goa</option><option>Gujrat</option><option>Haryana</option>
+				<option>Himachl Pradesh</option>	<option>Jammu & Kashmir</option><option>Jharkhand</option>
+				<option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option>
+				<option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option>
+				<option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option>
+				<option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option>
+				<option>UttraKhand</option><option>West Bengal</option>
+				</td></tr>
+				<tr><td>City</td><td><input type="text" name="text5" placeholder="City"></td></tr>
+				<tr><td>Address</td><td><textarea rows="4" cols="35"></textarea></td></tr>				
+			</table>						
+			</fieldset>
+			<table align="center">
+			<tr><td colspan="2"><input type="Submit" name="submit" value="Submit"><input type="Reset" name="Reset" value="Reset"></td></tr>			
+			</table>
+			
+		</form>	
+	</body>
+</html>
