@@ -4,48 +4,84 @@
 		<title>Login</title>
 		<style type="text/css">
 			div#d1
-			{  
-				width:100%;
-				padding-bottom: 10px;
-				background-image:url("bluehd.jpeg");
+			{
+				float:left;
+				width: 20%;
+				height: 20%;
+				color: white;
+				background-color: #3b5998;			
 			}
 			div#d2
 			{
-				float:left;				
-				width:70%;
-				height:100%;
-				background-image:url("sample6.jpg"); 
+				float: right;
+				width: 80%;
+				height: 20%;
+				background-color: #3b5998;			
 			}
 			div#d3
 			{
-				float: right;				
-				width: 30%;
-				height: 100%;
-				background-image: url("ll.jpg");					
+				float: left;
+				width: 25%;
+				height: 80%;
+				background-color: red;			
+			}
+			div#d4
+			{
+				float: right;
+				width: 25%;
+				height: 80%;
+				background-color: red;				
+			}
+			div#d5
+			{
+				position: absolute;
+				bottom: 0px;
+				height: 5%;
+				width: 100%;
+				background-color:gray;						
+			}
+			ul#menu li
+			{
+				text-align: center;
+				display: inline;
+				padding: 10px;
 			}
 			
 		</style>
 	</head>
-	<body>
+	<body link="black">
 		<form name="form1">
-			<div id="d1">
-			<h1>Sample Page</h1>
-			<h4 align="right"><input type="text" placeholder="UserName">
-			<input type="password" name="password" placeholder="Password">
-			<input type="submit" name="submit" value="Login"></h4>
-			</div>
-			<div id="d2">
-			
+		<div id="d1"><h1>Sample Page</h1></div>		
+		<div id="d2">
+			<h4 align="right">
+			<table>
+			<tr>			
+			<td><input type="text" placeholder="UserName"></td>
+			<td><input type="password" name="password" placeholder="Password"></td>
+			<td><input type="submit" name="submit" value="Login"></td>
+			<tr><td></td><td><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="forgetPassword" style="text-decoration:none">Forget Password?</a></h6></tr>
+			</table></h4>
 			</div>
 			<div id="d3">
+			This is div3
+			
+			
+			</div>
+			<div id="d4">
 			<p><a href="101.jpg">Image1</a></p><br>
 			<p><a href="bluehd.jpeg">Image2</a></p><br>
 			<p><a href="blue.jpg">Image3</a></p><br>
 			<p><a href="index.jpeg">Image4</a></p><br>
 			<p><a href="ll.jpg">Image5</a></p><br>
 			<a href="registrationForm.html">Registration</a><br>
-			</div>
-						
+			</div>	
 		</form>
+		<div id="d5"> 
+		<ul id="menu">
+			<li>About us</li>
+			<li>Contact Us</li>
+			<li>Terms and Conditions</li>		
+		</ul>		
+		</div>
 	</body>
 </html>
