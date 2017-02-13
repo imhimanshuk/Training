@@ -28,7 +28,7 @@
 		 function formValidation() 
 		 {
 			
-			/*if (document.myform.firstname.value=="")
+			if (document.myform.firstname.value=="")
 			 {
 			 	document.getElementById("fn").style.borderColor="red";
 				document.getElementById("error").innerHTML="Please enter First Name";
@@ -64,7 +64,7 @@
 				return false;			
 			}
 			
-			if (document.myform.country.value=="")
+		if (document.myform.country.value=="")
 			{
 				document.getElementById("co").style.borderColor="red";
 				document.getElementById("error4").innerHTML="Enter Valid Country Name";
@@ -75,11 +75,44 @@
 				document.getElementById("ci").style.borderColor="red";
 				document.getElementById("error5").innerHTML="Please Enter Valid City";
 				return false;	
-			}*/
+			}
 			if (document.myform.address.value=="")
 			{
 				document.getElementById("add").style.borderColor="red";
 				document.getElementById("error6").innerHTML="Please Enter Valid Address";
+				return false;
+			}
+			
+   	   if (document.myform.pgname.value=="")
+			{
+				document.getElementById("pg").style.borderColor="red";
+				document.getElementById("error7").innerHTML="Enter Valid Name";
+				return false;
+			}
+        
+        	if(isNaN(document.myform.pnumber.value) || document.myform.pnumber.value=="")
+			{
+				document.getElementById("pn").style.borderColor="red";
+				document.getElementById("error8").innerHTML="Please Enter valid number";
+				return false;			
+			}
+			
+			if (document.myform.pcountry.value=="")
+			{
+				document.getElementById("pc").style.borderColor="red";
+				document.getElementById("error9").innerHTML="Enter Valid Country Name";
+				return false;
+			}
+			if (document.myform.pcity.value=="")
+			{
+				document.getElementById("pcity").style.borderColor="red";
+				document.getElementById("error10").innerHTML="Please Enter Valid City";
+				return false;	
+			}
+			if (document.myform.paddress.value=="")
+			{
+				document.getElementById("padd").style.borderColor="red";
+				document.getElementById("error11").innerHTML="Please Enter Valid Address";
 				return false;
 			}
 		}  
@@ -128,7 +161,7 @@
 				<tr><td>City</td><td><input type="text" id="ci" name="city" placeholder="City"></td></tr>
 				<tr><td></td><td><h6 id="error5"></h6></td></tr>
 
-				<tr><td>Address</td><td><textarea rows="4" cols="35" id="add"></textarea></td></tr>				
+				<tr><td>Address</td><td><textarea rows="4" cols="35" id="add" name="address"></textarea></td></tr>				
 				<tr><td></td><td><h6 id="error6"></h6></td></tr>		
 		
 				</table>
@@ -136,10 +169,17 @@
 			<fieldset>
 			<legend>Parent/Guardian Detail</legend>
 			<table align="center" >
-			<tr><td><label for="name">Parent/Guardian Name</label></td><td><input type="text" name="text6" placeholder="Parent/Guardian Name"></td></tr>
-			<tr><td>Mobile Number</td><td><input type="text" name="number" maxlength="10" placeholder="Mobile Number"></td></tr>			
-			<tr><td>Country</td><td><input type="text" name="text4" placeholder="Country"	></td></tr>
+			<tr><td><label for="name">Parent/Guardian Name</label></td><td><input type="text" name="pgname" id="pg" placeholder="Parent/Guardian Name"></td></tr>
+			<tr><td></td><td><h6 id="error7"></h6></td></tr>			
+			
+			<tr><td>Mobile Number</td><td><input type="text" name="pnumber" id="pn" maxlength="10" placeholder="Mobile Number"></td></tr>			
+			<tr><td></td><td><h6 id="error8"></h6></td></tr>			
+			
+			<tr><td>Country</td><td><input type="text" name="pcountry" id="pc" placeholder="Country"	></td></tr>
+			<tr><td></td><td><h6 id="error9"></h6></td></tr>
+			
 				<tr><td>State</td><td><select name="State">
+				<option selected disabled>Choose...</option>				
 				<option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
 				<option>Chhattisgarh</option><option>Goa</option><option>Gujrat</option><option>Haryana</option>
 				<option>Himachl Pradesh</option>	<option>Jammu & Kashmir</option><option>Jharkhand</option>
@@ -148,9 +188,13 @@
 				<option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option>
 				<option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option>
 				<option>UttraKhand</option><option>West Bengal</option>
-				</td></tr>
-				<tr><td>City</td><td><input type="text" name="text5" placeholder="City"></td></tr>
-				<tr><td>Address</td><td><textarea rows="4" cols="35"></textarea></td></tr>				
+				</select></td></tr>
+				
+				<tr><td>City</td><td><input type="text" name="pcity" id="pcity" placeholder="City"></td></tr>
+				<tr><td></td><td><h6 id="error10"></h6></td></tr>
+				
+				<tr><td>Address</td><td><textarea rows="4" cols="35" name="paddress" id="padd"></textarea></td></tr>				
+				<tr><td></td><td><h6 id="error11"></h6></td></tr>		
 			</table>						
 			</fieldset>
 			<table align="center">

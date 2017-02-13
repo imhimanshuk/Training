@@ -7,18 +7,21 @@
 			{  
 				width:100%;
 				padding-bottom: 10px;
-				padding-left: 10px;
-				padding-right: 10px;
-				padding-top: 10px;
-				margin-top: auto;
-				margin-left:2px; 
 				background-image:url("bluehd.jpeg");
 			}
 			div#d2
 			{
+				float:left;				
 				width:70%;
 				height:100%;
-				background-image:url("101.jpg"); 
+				background-image:url("sample6.jpg"); 
+			}
+			div#d3
+			{
+				float: right;				
+				width: 30%;
+				height: 100%;
+				background-image: url("ll.jpg");					
 			}
 			
 		</style>
@@ -27,11 +30,22 @@
 		<form name="form1">
 			<div id="d1">
 			<h1>Sample Page</h1>
-			<h4 align="right">Login:<input type="text" name="username" value="username" placeholder="UserName"></h4>
+			<h4 align="right"><input type="text" placeholder="UserName">
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit" name="submit" value="Login"></h4>
 			</div>
 			<div id="d2">
 			
-			</div>			
+			</div>
+			<div id="d3">
+			<p><a href="101.jpg">Image1</a></p><br>
+			<p><a href="bluehd.jpeg">Image2</a></p><br>
+			<p><a href="blue.jpg">Image3</a></p><br>
+			<p><a href="index.jpeg">Image4</a></p><br>
+			<p><a href="ll.jpg">Image5</a></p><br>
+			<a href="registrationForm.html">Registration</a><br>
+			</div>
+						
 		</form>
 	</body>
 </html>
