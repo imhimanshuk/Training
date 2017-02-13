@@ -1,0 +1,32 @@
+<DOCTYPE! html>
+<html>
+	<head>
+	<title>Validation Example</title>
+	<script type="text/javascript" >
+		function validation() 
+		{
+     /* var x=document.myform.fname.value;
+         if( x == "" )
+         {
+         	document.getElementById("fn").style.borderColor="red";
+            document.getElementById("error").innerHTML="Please provide your name!";
+            return false;
+         } */
+        	
+			if(isNaN(document.myform.number.value) || document.myform.number.value=="")
+			{
+				document.getElementById("no").style.borderColor="red";
+				document.getElementById("error3").innerHTML="Please Enter valid number";
+				return false;			
+			} 
+		}
+	</script>
+	</head>
+	<body>
+		<form name="myform" method="post" onsubmit="return validation();">
+			<input type="text" name="fname" id="fn" placeholder="First Name"><p id="error"></p>
+			<input type="text" name="number" id="no" maxlength="10" placeholder="Mobile Number"><p id="error3"></p>
+			<input type="submit" name="submit" value="submit">
+		</form>
+	</body>
+</html>
