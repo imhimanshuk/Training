@@ -18,15 +18,51 @@
     			border: 2px groove (internal value);
     		}
     		
-    		table
-   		{
-    			
-    		}
-    		
+    		.tooltip
+    		{
+    			position: relative;
+    			display: inline-block;
+			}
+
+			.tooltip .tooltiptext
+			{
+    			visibility: hidden;
+    			width: 150px;
+    			background-color: #555;
+    			color: #fff;
+    			text-align: center;
+    			border-radius: 6px;
+    			padding: 5px 0;
+    			position: absolute;
+    			z-index: 1;
+    			bottom: 125%;
+    			left: 50%;
+    			margin-left: -60px;
+    			opacity: 0;
+    			transition: opacity 1s;
+			}
+
+			.tooltip .tooltiptext::after 
+			{
+			   content: "";
+    			position: absolute;
+    			top: 100%;
+    			left: 50%;
+    			margin-left: -5px;
+    			border-width: 5px;
+    			border-style: solid;
+    			border-color: #555 transparent transparent transparent;
+			}
+
+			.tooltip:hover .tooltiptext 	
+			{
+			   visibility: visible;
+    			opacity: 1;
+			}
 		</style>
 		<script type="text/javascript" >
-		 function formValidation() 
-		 {
+			function formValidation() 
+		 	{
 			
 			if (document.myform.firstname.value=="")
 			 {
@@ -115,8 +151,28 @@
 				document.getElementById("error11").innerHTML="Please Enter Valid Address";
 				return false;
 			}
+				var e=document.myform.email.value;
+				var x=e.indexOf("@");
+				var y=e.lastIndexOf(".");
+				if (e=="" || x<0 || y<x+2)
+				{
+					document.getElementById("emailerror").innerHTML="Enter valid email";
+					return false;					
+				}
 		}  
-	</script>  
+			function al() 
+			{
+			var a=confirm("Are you sure?");
+			if (a==true)
+			{
+				return true;	
+			}			
+			else
+			{
+				return false;
+			}
+		}
+	</script>
 	</head>
 	<body background="ll.jpg">
 	<header><h3>Registration Form</h3></header>
@@ -124,28 +180,29 @@
 			<fieldset>
 				<legend>Personal Information</legend>
 				<table align="center">
-				<tr><td><label for="name">First Name</label></td><td><input type="text" name="firstname" id="fn" placeholder="First Name"></td></tr>
+				<tr><td><label for="name">First Name</label></td><td><div class="tooltip"><input type="text" name="firstname" id="fn" placeholder="First Name"><span class="tooltiptext">Enter Your Name</span></div></td></tr>
 				<tr><td></td><td><h6  id="error"></h6></td></tr>				
 				
-				<tr><td>Middle Name</td><td><input type="text" name="middlename" placeholder="Middle Name"></td></tr>
+				<tr><td>Middle Name</td><td><div class="tooltip"><input type="text" name="middlename" placeholder="Middle Name"><span class="tooltiptext">Enter Your Middle Name</span></div></td></tr>
 
-				<tr><td>Last Name</td><td><input type="text" name="lastname" id="ln" placeholder="Last Name"></td></tr>
+				<tr><td>Last Name</td><td><div class="tooltip"><input type="text" name="lastname" id="ln" placeholder="Last Name"><span class="tooltiptext">Enter Your Last Name</span></div></td></tr>
 				<tr><td></td><td><h6  id="error1"></h6></td></tr>
 
-				<tr><td>Gender</td>
+				<tr><td><div class="tooltip">Gender<span class="tooltiptext">Select Gender</span></div></td>
 				<td><input type="radio" name="gender" id="gn" value="Male">Male</td>
 				<td><input type="radio" name="gender" id="gn" value="Female">Female</td></tr>
 				<tr><td></td><td><h6 id="error2"></h6></td></tr>
 
-				<tr><td>Mobile Number</td><td><input type="text" name="number" id="no" maxlength="10" placeholder="Mobile Number"></td><td></tr>
+				<tr><td>Mobile Number</td><td><div class="tooltip"><input type="text" name="number" id="no" maxlength="10" placeholder="Mobile Number"><span class="tooltiptext">Enter your Mobile Number</span></div></td><td></tr>
 				<tr><td></td><td><h6 id="error3"></h6></td></tr>				
 
-				<tr><td>Email</td><td><input type="email" name="email" placeholder="Email"></td></tr>		
+				<tr><td>Email</td><td><div class="tooltip"><input type="email" name="email" placeholder="Email"><span class="tooltiptext">Enter Email Id</span></div></td></tr>
+				<tr><td></td><td><h6 id="emailerror"></h6></td></tr>		
 				
-				<tr><td>Country</td><td><input type="text" name="country" id="co" placeholder="Country"	></td></tr>
+				<tr><td>Country</td><td><div class="tooltip"><input type="text" name="country" id="co" placeholder="Country"><span class="tooltiptext">Enter country Name</span></div></td></tr>
 				<tr><td></td><td><h6 id="error4"></h6></td></tr>
 
-				<tr><td>State</td><td><select name="State">
+				<tr><td><div class="tooltip">State<span class="tooltiptext">Select your state</span></div></td><td><select name="State">
 				<option selected disabled>Choose...</option>
 				<option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
 				<option>Chhattisgarh</option><option>Goa</option><option>Gujrat</option><option>Haryana</option>
@@ -158,10 +215,10 @@
 				</select>
 				</td></tr>
 				
-				<tr><td>City</td><td><input type="text" id="ci" name="city" placeholder="City"></td></tr>
+				<tr><td>City</td><td><div class="tooltip"><input type="text" id="ci" name="city" placeholder="City"><span class="tooltiptext">Enter city Name</span></div></td></tr>
 				<tr><td></td><td><h6 id="error5"></h6></td></tr>
 
-				<tr><td>Address</td><td><textarea rows="4" cols="35" id="add" name="address"></textarea></td></tr>				
+				<tr><td>Address</td><td><div class="tooltip"><textarea rows="4" cols="35" id="add" name="address"></textarea><span class="tooltiptext">Enter Address</span></div></td></tr>				
 				<tr><td></td><td><h6 id="error6"></h6></td></tr>		
 		
 				</table>
@@ -169,16 +226,16 @@
 			<fieldset>
 			<legend>Parent/Guardian Detail</legend>
 			<table align="center" >
-			<tr><td><label for="name">Parent/Guardian Name</label></td><td><input type="text" name="pgname" id="pg" placeholder="Parent/Guardian Name"></td></tr>
+			<tr><td><label for="name">Parent/Guardian Name</label></td><td><div class="tooltip"><input type="text" name="pgname" id="pg" placeholder="Parent/Guardian Name"><span class="tooltiptext">Enter Parent/guardian Name</span></div></td></tr>
 			<tr><td></td><td><h6 id="error7"></h6></td></tr>			
 			
-			<tr><td>Mobile Number</td><td><input type="text" name="pnumber" id="pn" maxlength="10" placeholder="Mobile Number"></td></tr>			
+			<tr><td>Mobile Number</td><td><div class="tooltip"><input type="text" name="pnumber" id="pn" maxlength="10" placeholder="Mobile Number"><span class="tooltiptext">Enter Mobile Number</span></div></td></tr>			
 			<tr><td></td><td><h6 id="error8"></h6></td></tr>			
 			
-			<tr><td>Country</td><td><input type="text" name="pcountry" id="pc" placeholder="Country"	></td></tr>
+			<tr><td>Country</td><td><div class="tooltip"><input type="text" name="pcountry" id="pc" placeholder="Country"	><span class="tooltiptext">Enter Country Name</span></div></td></tr>
 			<tr><td></td><td><h6 id="error9"></h6></td></tr>
 			
-				<tr><td>State</td><td><select name="State">
+				<tr><td><div class="tooltip">State<span class="tooltiptext">Select State</span></div></td><td><select name="State">
 				<option selected disabled>Choose...</option>				
 				<option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
 				<option>Chhattisgarh</option><option>Goa</option><option>Gujrat</option><option>Haryana</option>
@@ -190,15 +247,15 @@
 				<option>UttraKhand</option><option>West Bengal</option>
 				</select></td></tr>
 				
-				<tr><td>City</td><td><input type="text" name="pcity" id="pcity" placeholder="City"></td></tr>
+				<tr><td>City</td><td><div class="tooltip"><input type="text" name="pcity" id="pcity" placeholder="City"><span class="tooltiptext">Enter city Name</span></div></td></tr>
 				<tr><td></td><td><h6 id="error10"></h6></td></tr>
 				
-				<tr><td>Address</td><td><textarea rows="4" cols="35" name="paddress" id="padd"></textarea></td></tr>				
+				<tr><td>Address</td><td><div class="tooltip"><textarea rows="4" cols="35" name="paddress" id="padd"></textarea><span class="tooltiptext">Enter Address</span></div></td></tr>				
 				<tr><td></td><td><h6 id="error11"></h6></td></tr>		
 			</table>						
 			</fieldset>
 			<table align="center">
-			<tr><td colspan="2"><input type="Submit" name="submit" value="Submit"><input type="Reset" name="Reset" value="Reset"></td></tr>			
+			<tr><td colspan="2"><input type="Submit" name="submit" value="Submit" onclick="return al()"><input type="Reset" name="Reset" value="Reset" onclick="return al()"></td></tr>			
 			</table>
 		</form>	
 	</body>
