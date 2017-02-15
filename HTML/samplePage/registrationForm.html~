@@ -178,7 +178,7 @@
 	<header><h3>Registration Form</h3></header>
 		<form name="myform" method="post" onsubmit="return formValidation();">
 			<fieldset>
-				<legend>Personal Information</legend>
+				<legend> Personal Information</legend>
 				<table align="center">
 				<tr><td><label for="name">First Name</label></td><td><div class="tooltip"><input type="text" name="firstname" id="fn" placeholder="First Name"><span class="tooltiptext">Enter Your Name</span></div></td></tr>
 				<tr><td></td><td><h6  id="error"></h6></td></tr>				
