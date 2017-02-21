@@ -1,0 +1,227 @@
+airline_flight_information
+
+
+mysql> create database airline_flight_information;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use airline_flight_information;
+Database changed
+mysql> show databases;
++----------------------------+
+| Database                   |
++----------------------------+
+| information_schema         |
+| airline_flight_information |
+| classicmodels              |
+| mysql                      |
+| performance_schema         |
+| southwind                  |
+| student_record             |
+| sys                        |
++----------------------------+
+8 rows in set (0.00 sec)
+
+mysql> create table flights(flno int not null primary key,Source varchar(30),Destination varchar(32),depart time,arrives time, price int);
+Query OK, 0 rows affected (0.40 sec)
+
+mysql> desc flights;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| flno        | int(11)     | NO   | PRI | NULL    |       |
+| Source      | varchar(30) | YES  |     | NULL    |       |
+| Destination | varchar(32) | YES  |     | NULL    |       |
+| depart      | time        | YES  |     | NULL    |       |
+| arrives     | time        | YES  |     | NULL    |       |
+| price       | int(11)     | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> create table aircraft(aid int not null primary key, aname varchar(30),cruisingrange int);
+Query OK, 0 rows affected (0.30 sec)
+
+mysql> create table employees(eid int not null primary key, ename varchar(32),salary int);
+Query OK, 0 rows affected (0.27 sec)
+
+mysql> create table certified(eid int,aid int);
+Query OK, 0 rows affected (0.39 sec)
+
+mysql> alter table certified add constraint foreign key(aid) references aircraft(aid);
+Query OK, 0 rows affected (0.79 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table certified add constraint foreign key(eid) references employees(eid);
+Query OK, 0 rows affected (0.73 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc certified;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| eid   | int(11) | YES  | MUL | NULL    |       |
+| aid   | int(11) | YES  | MUL | NULL    |       |
++-------+---------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+
+mysql> 
+mysql> show tables;
++--------------------------------------+
+| Tables_in_airline_flight_information |
++--------------------------------------+
+| aircraft                             |
+| certified                            |
+| employees                            |
+| flights                              |
++--------------------------------------+
+4 rows in set (0.00 sec)
+
+
+mysql> insert into aircraft (aid, aname, cruisingrange) values  (3001, 'Airbus A380',8200), (3002,'Boeing 777',7370), (3003,'Airbus A320',3300), (3004,'Boeing 737',3115),  (3005,'Honda HondaJet',1400), (3006,'Pilatus PC-12',1845);
+Query OK, 6 rows affected (0.04 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> select * from aircraft;
++------+----------------+---------------+
+| aid  | aname          | cruisingrange |
++------+----------------+---------------+
+| 3001 | Airbus A380    |          8200 |
+| 3002 | Boeing 777     |          7370 |
+| 3003 | Airbus A320    |          3300 |
+| 3004 | Boeing 737     |          3115 |
+| 3005 | Honda HondaJet |          1400 |
+| 3006 | Pilatus PC-12  |          1845 |
++------+----------------+---------------+
+6 rows in set (0.00 sec)
+
+
+mysql> insert into employees (eid,ename,salary) values(
+    -> 101,'Amit',60000),
+    -> (102,'Abhi',75000),
+    -> (103,'Chetan',55000),
+    -> (104,'Deepak',67000),
+    -> (105,'Mohit',80000),
+    -> (106,'Sumit',73000),
+    -> (107,'Vijay',57000),
+    -> (108,'Vinit',77000),
+    -> (109,'Nitin',68000),
+    -> (110,'Shubham',58000),
+    -> (111,'Shivam',74000),
+    -> (112,'Rohit',54000);
+Query OK, 12 rows affected (0.03 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> select * from employees;
++-----+---------+--------+
+| eid | ename   | salary |
++-----+---------+--------+
+| 101 | Amit    |  60000 |
+| 102 | Abhi    |  75000 |
+| 103 | Chetan  |  55000 |
+| 104 | Deepak  |  67000 |
+| 105 | Mohit   |  80000 |
+| 106 | Sumit   |  73000 |
+| 107 | Vijay   |  57000 |
+| 108 | Vinit   |  77000 |
+| 109 | Nitin   |  68000 |
+| 110 | Shubham |  58000 |
+| 111 | Shivam  |  74000 |
+| 112 | Rohit   |  54000 |
++-----+---------+--------+
+12 rows in set (0.00 sec)
+
+mysql> insert into certified (eid,aid) values
+    -> (101,3001),
+    -> (102,3002),
+    -> (103,3003),
+    -> (104,3003),
+    -> (105,3005),
+    -> (106,3004),
+    -> (107,3002),
+    -> (108,3005),
+    -> (109,3006),
+    -> (110,3004),
+    -> (111,3001),
+    -> (112,3006);
+Query OK, 12 rows affected (0.10 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> select * from certified;
++------+------+
+| eid  | aid  |
++------+------+
+|  101 | 3001 |
+|  102 | 3002 |
+|  103 | 3003 |
+|  104 | 3003 |
+|  105 | 3005 |
+|  106 | 3004 |
+|  107 | 3002 |
+|  108 | 3005 |
+|  109 | 3006 |
+|  110 | 3004 |
+|  111 | 3001 |
+|  112 | 3006 |
++------+------+
+12 rows in set (0.00 sec)
+
+mysql> insert into flights values (1001,'New Delhi','New York',11884,'00:54:24','04:20:30',50000), (1002,'New Delhi','Berlin',5821,'03:33:30','05:20:45',30000),(1003,'New Delhi','Tokoyo',3659,'13:20:30','09:40:45',28000),(1004,'Mumbai','Dubai',5820,'20:45:30','06:20:45',30000),(1005,'Mumbai','Washington',12580,'23:15:58','02:30:55',55000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from flights;
++------+-----------+-------------+----------+----------+----------+-------+
+| flno | Source    | Destination | distance | depart   | arrives  | price |
++------+-----------+-------------+----------+----------+----------+-------+
+| 1001 | New Delhi | New York    |    11884 | 00:54:24 | 04:20:30 | 50000 |
+| 1002 | New Delhi | Berlin      |     5821 | 03:33:30 | 05:20:45 | 30000 |
+| 1003 | New Delhi | Tokoyo      |     3659 | 13:20:30 | 09:40:45 | 28000 |
+| 1004 | Mumbai    | Dubai       |     5820 | 20:45:30 | 06:20:45 | 30000 |
+| 1005 | Mumbai    | Washington  |    12580 | 23:15:58 | 02:30:55 | 55000 |
++------+-----------+-------------+----------+----------+----------+-------+
+5 rows in set (0.01 sec)
+
+
+a)Find the names of aircraft such that all pilots certified to operate them earn more than 70,000. 
+
+
+mysql> select aname from aircraft a, certified c, employees e where (a.aid=c.aid) and (c.eid=e.eid) and salary >70000;
++----------------+
+| aname          |
++----------------+
+| Boeing 777     |
+| Honda HondaJet |
+| Boeing 737     |
+| Honda HondaJet |
+| Airbus A380    |
++----------------+
+5 rows in set (0.00 sec)
+
+
+mysql> select aname,ename,salary from aircraft a, certified c, employees e where (a.aid=c.aid) and (c.eid=e.eid) and salary >70000;
++----------------+--------+--------+
+| aname          | ename  | salary |
++----------------+--------+--------+
+| Boeing 777     | Abhi   |  75000 |
+| Honda HondaJet | Mohit  |  80000 |
+| Boeing 737     | Sumit  |  73000 |
+| Honda HondaJet | Vinit  |  77000 |
+| Airbus A380    | Shivam |  74000 |
++----------------+--------+--------+
+5 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
