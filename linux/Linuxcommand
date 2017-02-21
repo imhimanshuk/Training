@@ -1,0 +1,1836 @@
+Status Dated 30/01/2016
+1  man sudo_root
+    2  exit
+    3  which ruby
+    4  ruby -v
+    5  sudo apt-get install ruby-full
+    6  sudo add-apt-repository ppa:noteadqq-team/notepadqq
+    7  sudo apt-get install notepadqq
+    8  sudo apt-get update
+    9  sudo add-apt-repository ppa:noteadqq-team/notepadqq
+   10  sudo apt-get install notepadqq
+   11  sudo add-apt-repository ppa:notepadqq-team/notepadqq
+   12  pwd
+   13  administrator
+   14  ls
+   15  ls desktop
+   16  ls Desktop
+   17  ls Documents
+   18  ls Downloads
+   19  clrscr
+   20  cd..
+   21  cd
+   22  mkdir lk
+   23  ls
+   24  cd lk
+   25  mkdir lop
+   26  ls lk
+   27  cd..
+   28  cd
+   29  pwd
+   30  ls lk
+   31  cd lk
+   32  cd lop
+   33  mkdir mkl
+   34  cd
+   35  cd\>
+   36  ls ll
+   37  ls lm
+   38  ls lk
+   39  rmdir lk
+   40  rmdir/?
+   41  rmdir\?
+   42  cd lk
+   43  cd
+   44  cd lk/lop
+   45  ls lop
+    46  cd
+   47  cd ls
+   48  cd lk
+   49  rmdir lop
+   50  cd lop
+   51  rmdir mlk
+   52  rmdir mkl
+   53  rmdir lop
+   54  ..
+   55  cd>
+   56  cd\
+   57  cd lk
+   58  rmdir lop
+   59  cd
+   60  rmdir lk
+   61  clrscreen
+   62  cd~
+   63  cd ~
+   64  cd /
+   65  cd ~
+   66  mkdir dir1
+   67  cd dir1
+   68  mkdir dir2
+   69  cd dir2
+   70  mkdir dir3
+   71  cd dir3
+   72  cd ~
+   73  cd dir1/dir2/dir3
+   74  cd -
+   75  cd dir1/dir2/dir3
+   76  cd..
+   77  cd,,
+   78  cd ..
+   79  cd..
+   80  cd ..
+   81  cd /
+   82  cd ~
+   83  cd dir1/dir2/dir3
+   84  cd /
+   85  cd~
+   86  cd ~
+   87  cd dir1/dir2/dir3/
+   88  cd ~
+   89  ls -a
+   90  cd .profile
+   91  ls -l
+   92  ls -l -a
+   93  ls -lh
+   94  ls -lhs
+   95  ls -lhS
+   96  ls -d */
+   97  cd dir1
+   98  ls -d */
+   99  mkdir dir1.1
+  100  ls -d */
+  101  ls -g
+  102  ls -LG
+  103  ls -lG
+  104  ls -n
+  105  ls --color=[1]
+  106  ls --color=[yes]
+  107  ls --color=['yes']
+  108  ls --help
+  109  ls --color=[a]
+  110  ls -p
+  111  ls -r
+  112  ls -R
+  113  ls ~
+  114  ls ../
+  115  ls --version
+  116  cd ..
+  117  --version
+  118  cd dir1/
+  119  cd dir
+  120  cd dir1.1/
+  121  ls
+  122  mkdir dir1.1.1 dir1.1.2 dir 1.1.3
+  123  ls
+  124  ls -h
+  125  ls -l
+  126  ls -lH
+  127  ls -r
+  128  ls -LS
+  129  ls -lS
+  130  cd ..
+  131  cd dir2/dir3/
+  132  mkdir -p
+  133  mkdir -p dir3.1
+  134  ls
+  135  mkdir -p dir3.2 dir3.3 dir3.4
+  136  ls
+  137  cd dir3.1
+  138  mkdir -v dir3.1.1
+  139  ls
+  140  mkdir -m
+  141  mkdir -m --help
+  142  mkdir --help
+  143  mkdir --version
+  144  mkdir -m  rx dir3.2
+  145  mkdir -m  rmx dir3.2
+  146  mkdir -m  wx dir3.2
+  147  mkdir -m  rwx dir3.2
+  148  mkdir -m dir3.2 wr
+  149  rw
+  150  mkdir -m dir3.2 rw
+  151  mkdir -m dir3.2 rwx
+  152  ls -R
+  153  cd ..
+  154  ls _r
+  155  ls -R
+  156  rmdir -r dir3
+  157  rmdir -p dir3
+  158  rmdir -p dir3.1
+  159  rmdir -p dir3.1/dir3.1.1
+  160  ls -R
+  161  cd..
+  162  cd ..
+  163  rmdir -p dir3/
+  164  ls
+  165  rmdir -p dir3/dir3.2/
+  166  ls
+  167  cd..
+  168  cd ..
+  169  ls
+  170  cd dir1/dir2/
+  171  filw
+  172  file
+  173  ls
+  174  file dir3/
+  175  file -s dir3/
+  176  file * dir3/
+  177  touch file1
+  178  ls
+  179  file -s file1
+  180  touch file2 file3 file 4
+  181  ls
+  182  touch --version
+  183  touch --help
+  184  clear
+  185  ls
+  186  touch -c file4
+  187  ls
+  188  touch -c file4 ggkboiboe
+  189  ls
+  190  rm 4
+  191  ls
+  192  rm file
+  193  ls
+  194  rm dir3
+  195  rmdir file3
+  196  rm file3/file2
+  197  rm file3
+  198  ls
+  199  clear
+  200  ls
+  201  cp file1 filw2
+  202  cp file1 file2
+  203  ls
+  204  cp file1 fil2
+  205  ls
+  206  cp file1 /dir1
+  207  cp file1 /Desktop
+  208  ls
+  209  pwd
+  210  cp file1 /home/himanshu/dir1/
+  211  ls /home/himanshu//dir1/
+  212  ls
+  213  mv filw2 fill
+  214  ls
+  215  mv fill /home/himanshu/dir1/
+  216  ls /home/himanshu/dir1/
+  217  mv dir2 di2
+  218  mv dir dir2 di2
+  219  ls
+  220  mv dir dir3 di2
+  221  ls
+  222  mv dir dir3 di
+  223  ls
+  224  cd ..
+  225  ls
+  226  rename 's/\/text/\.pdf' *.text
+  227  l
+  228  ls
+  229  rename 's/\/text/\.pdf' newf.text
+  230  pwd
+  231  cd
+  232  cd dir1
+  233  cd
+  234  cd dir1
+  235  ls
+  236  cd dir1.1
+  237  cd -
+  238  cd dir1.1
+  239  ls
+  240  cs 1.1.3
+  241  cd 1.1.3
+  242  cd /
+  243  ls -a
+  244  l
+  245  ls
+  246  ~
+  247  cd ~
+  248  cd /
+  249  ls
+  250  cd bin
+  251  ls
+  252  cd ~
+  253  cd /
+  254  ls -l
+  255  ls -lh
+  256  ls -lhS
+  257  mkdir Himanshu
+  258  cd ~
+  259  mkdir Himanshu
+  260  ls
+  261  cd Himanshu/
+  262  cd Loop/Kill/Cool
+  263  mkdir Loop/Kill/Cool
+  264  ls
+  265  mkdir Loop Kill Cool
+  266  ls
+  267  mkdir -v loop
+  268  ls
+  269  mkdir --help
+  270  mkdir -m --help
+  271  mkdir -m -mode=--help
+  272  mkdir -m -mode=rwx
+  273  mkdir -m -mode=rwx like
+  274  mkdir -m -mode=chmode like
+  275  mkdir -m -mode=chmod like
+  276  clear
+  277  cd ..
+  278  ls
+  279  pwd
+  280  rmdir Himanshu/loop
+  281  ls
+  282  cd Himanshu/
+  283  ls
+  284  cd ..
+  285  rmdir Himanshu/Cool
+  286  ls
+  287  cd Himanshu/
+  288  ls
+  289  cd ..
+  290  rmdir Himanshu/Kill/
+  291  rmdir Himanshu/Loop/
+  292  ls
+  293  rmdir Himanshu/
+  294  ls
+  295  mkdir
+  296  mkdir Himanshu/Loop
+  297  mkdir Himanshu
+  298  mkdir Himanshu/loop
+  299  cd Himanshu/
+  300  ls
+  301  pwd
+  302  cd..
+  303  cd .
+  304  cd ..
+  305  rmdir /home/himanshu/Himanshu/loop/
+  306  ls
+  307  cd Himanshu/
+  308  ls
+  309  rmdir  /home/himanshu/Himanshu/
+  310  ls
+  311  mkdir loop
+  312  cd ..
+  313  ls
+  314  cd dir1
+  315  ls
+  316  file
+  317  ls
+  318  file newf
+  319  file newf.txt
+  320  ls
+  321  mv file1 /home/himanshu/dir1/dir1.1
+  322  ls
+  323  cd dir1.1
+  324  ls
+  325  cd ..
+  326  mv -i fill file
+  327  ls
+  328  mv -i fill file
+  329  mv -i file file
+  330  mv -i file fil
+
+Status Dated 01/02/2016
+
+  331  ls
+  332  cd dir1.1/
+  333  ls
+  334  mv * /home/himanshu/dir1/dir1.1/
+  335  mv * /home/himanshu/dir1/dir1.1/dir
+  336  mv * /home/himanshu/dir1/
+  337  cd ..
+  338  ls
+  339  mv ?suffix=.txt newf newfi
+  340  mv ?suffix=.txt dir2 dir3
+  341  mv ?suffix=.txt dir2 dir1.1
+  342  exit
+  343  vi 
+  344  cat newf.txt
+  345  cd dir1/
+  346  cat newf.txt
+  347  cat > newf.txt <<EOF
+hello
+This is linux
+EOF
+
+  348  cat -n newf.txt
+  349  tac newf.txt
+  350  tac newf --seprator "this" 
+  351  tac newf.txt --seprator "this" 
+  352  tac newf.txt--seprator "This" 
+  353  tac newf.txt --seprator "This" 
+  354  ls
+  355  cat -n first
+  356  tac first --separator "b"
+  357  claer
+  358  clear
+  359  more first
+  360  more /var/log/udev
+  361  clear
+  362  more -num first
+  363  more -1 first
+  364  more -d first
+  365  clear
+  366  more -d first
+  367  more -s first
+  368  clear
+  369  more -5 -s first
+  370  more +/th first
+  371  more +/y first
+  372  clear
+  373  more +2 first
+  374  more +2 newf.txt
+  375  more +1 newf.txt
+  376  less first
+  377  /first
+  378  claer
+  379  clear
+  380  less first
+  381  /first
+  382  less first
+  383  man hier
+  384  man /root
+  385  man /
+  386  ls /
+  387  ls /root
+  388  ls /boot
+  389  ls /bin
+  390  ls /var
+  391  ls /var/log
+  392  cd ..
+  393  clear
+  394  ls /cdrom
+  395  ls
+  396  ls  /
+  397  ls /cdrom
+  398  cd /cdrom
+  399  ls
+  400  cd ..
+  401  cut -d- -f newf.txt
+  402  ~
+  403  cd ~
+  404  cd  dir1/
+  405  cut -d- -f newf.txt
+  406  ls
+  407  cut -d- -f first
+  408  cat > mark
+  409  cut -d- -f mark
+  410  cut -d--f mark
+  411  cut -d- -f1 mark
+  412  cut -d- -f2 mark
+  413  cut -d- -f12 mark
+  414  cut -d- -f1 first
+  415  cut -d- -f2 first
+  416  clear
+  417  cut -d- -f2 first
+  418  clear
+  419  sort newf.txt |uniq -c
+  420  sort first |uniq -c
+  421  wc first
+  422  wc -l first
+  423  wc -c first
+  424  wc -w first
+  425  cat < frist
+  426  ls
+  427  cat < first
+  428  cat > first 
+  429  cat 2> first
+  430  cat < first
+  431  cat >> first
+  432  cat < first
+  433  cat >> fist
+  434  cat >> first
+  435  cat < first
+  436  ls
+  437  cat < first
+  438  ls
+  439  cat < loo
+  440  cat > loo
+  441  ls
+  442  cat textFile
+  443  ls textFile
+  444  ls *.txt | cat > textFile
+  445  ls
+  446  ls *.txt | cat > textFile
+  447  clear
+  448  find . -name ".txt"
+  449  ls
+  450  find . -name "*.txt"
+  451  find .type d -name ?*.bak?
+  452  find . -type d -name ?*.bak?
+  453  ls
+  454  find . -nwer d -name ?*.bak?
+  455* find . -newer di r-name ?*.bak?
+  456  history
+ 457  clear
+  458  ls
+  459  find . -newer mark
+  460  ls -H
+  461  ls -lS
+  462  cd..
+  463  ls -lS
+  464  cd ..
+  465  ls -lS
+  466  ls -a
+  467  find .local
+  468  locate .local
+  469  date
+  470  man date
+  471  cal
+  472  cal july 1992
+  473  cal july 2092
+  474  sleep 1
+  475  sleep 5
+  476  time
+  477  time man
+  478  time date
+  479  ls
+  480  ls /
+  481  df
+  482  cd dir1/
+  483  grep l newf.txt
+  484  who
+  485  whoami
+  486  w
+  487  id
+  488  cd ..
+  489  /etc/passwd
+  490  useradd -d
+  491  passwd
+  492  /etc/shadow
+  493  cd dir1/
+  494  ls -lh
+  495  cut -d: -f1 /etc/passwd |column
+  496  type pwd
+  497  type clear
+  498  which pwd
+  499  which pwd clear
+  500  file
+  501  clear
+  502  alias clr=clear
+  503  clr
+  504  unalias clr
+  505  clr
+  506  alias clr=clear
+  507  echo This   is Linux  .
+  508  set -x
+  509  echo ls
+  510  clr
+  511  ipconfig
+  512  ifconfig
+  513  cd..
+  514  cd ..
+  515  +set
+  516  set +x
+  517  ifconfig wlan0
+  518  ifconfig wlano
+  519  ifconfig wlanO
+  520  ifconfig wlan0
+  521  ifconfig
+  522  ifconfig wlp3s0
+  523  ip
+  524  ip a show wlp3s0
+  525  traceroute
+  526  sudo apt-get install inetutils-traceroute
+  527  traceroute 
+  528  traceroute javatpoint
+  529  traceroute javatpoint.com
+  530  traceroute google.com
+  531  tracepath javatpoint
+  532  tracepath javatpoint.cm
+  533  tracepath javatpoint.com
+  534  ping 192.168.0.126
+  535  ifconfig
+  536  ping 192.168.1.5
+  537  ping 192.168.0.126
+  538  nerstat
+  539  netstat
+  540  netstat -p
+  541  netstat -r
+  542  ss
+  543  dig javatpoint.com
+  544  dig google.com
+  545  nslookup javatpoint
+  546  nslookup google.com
+  547  route
+  548  iwconfig
+  549  hostname
+  550  sudo hostname himanshu
+  551  sudo apt-get install ifpluged
+  552  ifpluged
+  553  ifplugestatus
+  554  ifplugstatus
+  555  sudo apt-get install ifpluged 
+  556  clr
+  557  mkdir Himanshu
+  558  cd Himanshu
+  559  vi Sample
+  560  cat vi
+  561  cat Sample
+  562  cat > Sample
+  563  cat < Sample
+  564  vi sample1
+  565  cat > sample1
+  566  cat < sample1
+  567  delete sample1
+  568  rm sample1
+  569  ls
+  570  rm Sample
+  571  ls
+  572  vi Sample
+  573  cat < Sample
+  574  ls
+  575  clr
+  576  vi Sample
+  577  vi test
+  578  cat < test
+  579  ip
+  580  ifconfig
+  581  clr
+  582  vi test1
+  583  cat < test1
+  584  vi test2
+  585  clr
+  586  history
+  587   cd Himanshu
+  588   cd ..
+  589  clr
+  590  ping -c 5 192.168.1.13
+  591  {pinehead@localhost~]$ man ssh
+  592  [pinehead@localhost~]$ man ssh
+  593  [pineehad@localhost~]$ ssh loaclhost
+  594  ls
+  595  scp foobar.txt your_username@remotehost.edu:/some/remote/directory
+  596  scp foobar.txt your_username@192.168.1.13:/some/remote/directory
+  597  scp foobar.txt himanshu@192.168.1.13:/some/remote/directory
+  598  scp foobar.txt 192.168.1.5@192.168.1.13:/some/remote/directory
+  599  ping 192.168.1.13
+  600  cd ..
+  601  mkdir HimanshuGit
+  602  cd Himanshu
+  603  cd ..
+  604  cd HimanshuGit/
+  605  git init
+  606  sudo apt install git
+  607  git init
+  608  mnelson:myproject mnelson$ git init
+  609  chmode
+  610  pwd
+  611  mnelson:myproject mnelson$ git init
+  612  Initialized empty Git repository in /home/himanshu/HimanshuGit/.git/
+  613  gitinit
+  614  git init
+  615  mnlson:HimanshuGit mnelson$ git init Initialized empty Git repository in /home/himanshu/HimanshuGit/.git
+  616  mnelson:HimanshuGit mnelson$ git init Initialized empty Git repository in /home/himanshu/HimanshuGit/.git
+  617  sudo apt -get install git
+  618  sudo apt-get install git
+  619  git config --global user.name "imhimanshuk"
+  620  git config --global user.email "katiyar01himanshu@gmail.com"
+  621  git init Mytest
+  622  cd mytest
+  623  cd Mytest
+  624  gedit README
+  625  git add README
+  626  git commit -m "Testing Git"
+  627  getit README
+  628  gedit README
+  629  git add README
+  630  git commit -m "Testin"
+  631  cd ..
+  632  mkdir Training
+  633  cd Training
+  634  git init Linux
+  635  cd Linux
+  636  gedit README
+  637  git add README
+  638  git commit -m "Testing Git"
+  639  git remote add origin https://github.com/imhimanshuk/Linux.git
+  640  git push origin master
+  641  history
+  642  clr
+  643  git add Linux.odt
+  644  ls
+  645  git add Linux.odt
+  646  git commit -m "Status 01/02/2017"
+  647  git remote add origin master https://github.com/imhimanshuk/Linux.git
+  648  git remote add origin master https://github.com/imhimanshuk/Linux
+  649  git remote add origin master https://github.com/imhimanshuk/Linux.odt
+  650  git push origin master
+  651  git add Linux.odt
+  652  git push 
+  653  git push
+  654  git push 
+  655  git push origin master 
+  656  clr
+  657  git add Linux.odt
+  658  git commit -m "Status 01/02/2017"
+  659  git push origin master
+  660  history
+  661  history
+  662  clr
+  663  ping -c 5 192.168.1.13
+  664  {pinehead@localhost~]$ man ssh
+  665  [pinehead@localhost~]$ man ssh
+  666  [pineehad@localhost~]$ ssh loaclhost
+  667  ls
+  668  scp foobar.txt your_username@remotehost.edu:/some/remote/directory
+  669  scp foobar.txt your_username@192.168.1.13:/some/remote/directory
+  670  scp foobar.txt himanshu@192.168.1.13:/some/remote/directory
+  671  scp foobar.txt 192.168.1.5@192.168.1.13:/some/remote/directory
+  672  ping 192.168.1.13
+  673  cd ..
+  674  mkdir HimanshuGit
+  675  cd Himanshu
+  676  cd ..
+  677  cd HimanshuGit/
+  678  git init
+  679  sudo apt install git
+  680  git init
+  681  mnelson:myproject mnelson$ git init
+  682  chmode
+  683  pwd
+  684  mnelson:myproject mnelson$ git init
+  685  Initialized empty Git repository in /home/himanshu/HimanshuGit/.git/
+  686  gitinit
+  687  git init
+  688  mnlson:HimanshuGit mnelson$ git init Initialized empty Git repository in /home/himanshu/HimanshuGit/.git
+  689  mnelson:HimanshuGit mnelson$ git init Initialized empty Git repository in /home/himanshu/HimanshuGit/.git
+  690  sudo apt -get install git
+  691  sudo apt-get install git
+  692  git config --global user.name "imhimanshuk"
+  693  git config --global user.email "katiyar01himanshu@gmail.com"
+  694  git init Mytest
+  695  cd mytest
+  696  cd Mytest
+  697  gedit README
+  698  git add README
+  699  git commit -m "Testing Git"
+  700  getit README
+  701  gedit README
+  702  git add README
+  703  git commit -m "Testin"
+  704  cd ..
+  705  mkdir Training
+  706  cd Training
+  707  git init Linux
+  708  cd Linux
+  709  gedit README
+  710  git add README
+  711  git commit -m "Testing Git"
+  712  git remote add origin https://github.com/imhimanshuk/Linux.git
+  713  git push origin master
+  714  history
+  715  clr
+  716  git add Linux.odt
+  717  ls
+  718  git add Linux.odt
+  719  git commit -m "Status 01/02/2017"
+  720  git remote add origin master https://github.com/imhimanshuk/Linux.git
+  721  git remote add origin master https://github.com/imhimanshuk/Linux
+  722  git remote add origin master https://github.com/imhimanshuk/Linux.odt
+  723  git push origin master
+  724  git add Linux.odt
+  725  git push 
+  726  git push
+  727  git push 
+  728  git push origin master 
+  729  clr
+  730  git add Linux.odt
+  731  git commit -m "Status 01/02/2017"
+  732  git push origin master
+  733  history
+  734  cd ..
+  735  git clone https://github.com/imhimanshuk/Linux.git
+  736  ls
+  737  cd Linux
+  738  exit
+  739  history
+
+Status 02/07/2017
+
+   740  clr
+  741  alias clr=clear
+  742  clr
+  743  whereis gcc
+  744  which gcc
+  745  history
+  746  cd Linux/
+  747  git add Linux.odt
+  748  git -m commit "Update"
+  749  git commit -m "Update"
+  750  git push origin master
+  751  git add .
+  752  git commit -m "Test Pull Changes" 
+  753  git puch origin master
+  754  git push origin master
+  755  git pull
+  756  git add README
+  757  git commit -m "Test Changes"
+  758  git push origin master
+  759  git pull
+  760  git status
+  761  git add file
+  762  gedit file
+  763  git add file
+  764  git commit -m "Test Delete"
+  765  git push origin master
+  766  git rm file
+  767  git commit -m "Removing testing file"
+  768  git push all
+  769  git push origin master
+  770  nc $ip 55555
+  771  nc $IP 55555
+  772  ifconfig
+  773  ping -c 5 192.168.1.8
+  774  sudo apt-get install talk
+  775  connection requested by himanshu@himmanshu-Inspiron-3541
+  776  clr
+  777  alias clr=clear
+  778  clr
+  779  scp --help
+  780  scp -p
+  781  ifconfig
+  782  nc -l 55555
+  783  scp options src dest
+  784  cd ..
+  785  mkdir dest
+  786  cd dest
+  787  talk 192.168.1.8
+  788  vi ex
+  789  scp options src ex
+  790  cd ..
+  791  scp options src dest
+  792  scp dest src dest
+  793  ssh 192.168.1.8@192.168.0.118
+  794  ping -c 3192.168.1.8
+  795  ping -c 3 192.168.1.8
+  796  ping -c 3 192.168.0.104
+  797  ssh 192.168.0.104@192.168.0.118
+  798  ssh 192.168.0.118@192.168.0.104
+  799  ssh root@192.168.0.108
+  800  ssh root@192.168.0.118
+  801  ssh root@192.168.0.108
+  802  config-network
+  803  ifconfig
+  804  ping -c 3 192.168.0.255
+  805  ping -b -c 3 192.168.0.255
+  806  ssh root@192.168.0.255
+  807  ssh root@192.168.0.108
+  808  route -n
+  809  ifconfig -a
+  810  traceroute 192.168.0.108
+  811  tracepath 192.168.0.108
+  812  ifplugstatus
+  813  sudo apt install ifplugd
+  814  ifplugd
+  815  sudo -i
+  816  sudo apt-get update
+  817  sudo apt-get install mysql
+  818  sudo apt-get update
+  819  sudo apt-get install mysql-server
+  820  sudo mysql_secure_installation
+  821  $ systemctl status mysql.service
+  822  systemctl status mysql.service
+  823  sudo systemctl mysql start
+  824  /etc/rc.d/init.d/mysqld start
+  825  apt-get install mysql-client
+  826  sudo apt-get install mysql-client
+  827  /etc/rc.d/init.d/mysqld start
+  828  mysql
+  829  sudo -i
+  830  mysql -u root -p
+  831  ls
+  832  cd Desktop/
+  833  mkdir Himanshu
+  834  cd Himanshu
+  835  vi file1
+  836  vi file2
+  837  cd ..
+  838  mkdir Fold
+  839  cd Desktop/
+  840  mkdir fold
+  841  cp /Himanshu/file1,file2 /fold 
+  842  cp /Himanshu/file1 /fold 
+  843  cp Himanshu/file1 /fold 
+  844  cp Desktop/Himanshu/file1 Desktop/fold 
+  845  cp Himanshu/file1 Desktop/fold 
+  846  ls 
+  847  cp Himanshu/file1 fold/
+  848  cp Himanshu/file1,file2 fold/
+  849  cp Himanshu/file1, file2 fold/
+  850  cp Himanshu/file1, Hiamsnhu/file2 fold/
+  851  cp Himanshu/file1, Himanshu/file2 fold/
+  852  cd Himanshu
+  853  git add Himanshu
+  854  git initial
+  855  git init
+  856  git add .
+  857  git commit -m "Test"
+  858  git add file1
+  859  git add file2
+  860  git commit -m "Test'
+  861  "
+  862  git commit -m "Test"
+  863  git add file1
+  864  git add file2
+  865  git commit -m "Test"
+  866  git remote add origin https://github.com/imhimanshuk/Himanshu
+  867  git add file1
+  868  git add file2
+  869  git commit -m "test"
+  870  git value origin master
+  871  git --help
+  872  git commit origin master
+  873  git puch origin master
+  874  git push origin master
+  875  gedit file3
+  876  git add file3
+  877  git rm file2
+  878  git commit -m "Test"
+  879  git push origin master
+  880  cd ..
+  881  ifconfig
+  882  cd ~/Desktop/
+  883  ls
+  884  cd Himanshu/
+  885  ls
+  886  scp file1 vishal@192.168.0.126:/Desktop
+  887  ifconfig
+  888  sudo ufw enable
+  889  sudo ufw allow 22
+  890  sudo apt-get install openssh-server 
+  891  sudo ufw status
+  892  sudo scp file1 vishal@192.168.0.126:/Desktop
+  893  sudo scp file1 vinay@192.168.0.113:/Desktop
+  894  cp file1 vinay@192.168.0.113:/Desktop
+  895  cp file1 vinay@192.168.0.113:~/Desktop
+  896  cp file1 vinay@192.168.0.113:/
+  897  scp file1 vinay@192.168.0.113:/
+  898  scp file1 vinay@192.168.0.113:/Desktop
+  899  cd ..
+  900  chmod 777 Himanshu
+  901  cd Himanshu
+  902  ls
+  903  scp file1 khusbhu@192.168.0.126:~/Desktop/vishal
+  904  cp file3 ~/Desktop/fold
+  905  cd ..
+  906  cd fold
+  907  ls
+  908  history
+
+
+Status 03/02/2017
+
+  
+  909  git add Linux.odt
+  910  git add Linux
+  911  alias clr=clear
+  912  clr
+  913  cd Linux/
+  914  git add Linux
+  915  git add Linux.odt
+  916  git commit -m "Update 02/02/2017"
+  917  git push origin master
+  918  git commit -m "Update 02/02/2017"
+  919  git push origin master
+  920  sudo apt-get update
+  921  sudo apt-get install postgresql postgresql-contrib
+  922  psql
+  923  sudo s - postgres
+  924  sudo su - postgres
+  925  clr
+  926  cd ..
+  927  cd Desktop/
+  928  cd Himanshu/
+  929  ls
+  930  cd ..
+  931  ls
+  932  cp ~/Desktop/Himanshu/* ~/Desktop/fold/
+  933  cd fold
+  934  ls
+  935  cd 
+  936  cd  ~/Desktop/Himanshu/
+  937  cd
+  938  ps
+  939  kill 2407 
+  940  ps
+  941  ps -e
+  942  ps -ef
+  943  ps -efl
+  944  ps -u root
+  945  ps -U root -u root u
+  946  clr
+  947  /bin/kill
+  948  kill(1)
+  949  /bin/kill(1)
+  950  ls -l
+  951  ls -a
+  952  ls --version
+  953  mkdir -p ~/Desktop/Himanshu/1/2/3
+  954  cd ~/Desktop/Himanshu/
+  955  ls
+  956  cd 1
+  957  ls
+  958  cd 2
+  959  ls
+  960  cd
+  961  rmdir ~/Desktop/Himanshu/
+  962  cd ~/Desktop/Himanshu/
+  963  rmdir ~/Himanshu/
+  964  rmdir -p ~/Himanshu/
+  965  rmdir -p Himanshu/
+  966  rmdir -p 1/2/3
+  967  ls
+  968  file 
+  969  file file1
+  970  file *
+  971  mkdir -p 1/2/3
+  972  ls
+  973  cd 1
+  974  ls
+  975  cd ..
+  976  cp -r 1/2/3 ~/Desktop/fold/
+  977  cd ..
+  978  cd fold
+  979  ls
+  980  cp -r 1/ ~/Desktop/fold/
+  981  cd ..
+  982  cd Himanshu/
+  983  cp -r 1/ ~/Desktop/fold/
+  984  cd ..
+  985  cd fold
+  986  ls
+  987  cd 1
+  988  ls
+  989  cd 2
+  990  ls
+  991  touch loo
+  992  cd ..
+  993  touch loop
+  994  ls
+  995  cd 2
+  996  ls
+  997  cd 3
+  998  ls
+  999  touch like
+ 1000  ls
+ 1001  cd ..
+ 1002  cd ~/Desktop/
+ 1003  cp -r fold/ ~/Desktop/Himanshu/
+ 1004  cd Himanshu/
+ 1005  ls
+ 1006  cd fold/
+ 1007  ls
+ 1008  cd 1
+ 1009  ls
+ 1010  clr
+ 1011  cd ~/Desktop/
+ 1012  ls
+ 1013  cd Himanshu/
+ 1014  ls
+ 1015  cd ..
+ 1016  ls
+ 1017  cd  fold
+ 1018  ls
+ 1019  rm *
+ 1020  ls
+ 1021  rmdir -a *
+ 1022  rmdir *
+ 1023  rmdir -p
+ 1024  rmdir -p 1
+ 1025  1/2/3
+ 1026  rmdir -p 1/2/3
+ 1027  cp ~/Desktop/Himanshu/* ~/Desktop/fold/
+ 1028  cp -r ~/Desktop/Himanshu/* ~/Desktop/fold/
+ 1029  cd
+ 1030  ls
+ 1031  cd ~/Desktop/Himanshu/
+ 1032  ls
+ 1033  cat file1 | grep t
+ 1034  ls file1 | grep t
+ 1035  ls ~/Desktop/ | gerp H
+ 1036  ls ~/Desktop/ | grep H
+ 1037  ls -a
+ 1038  ls -l
+ 1039  cd
+ 1040  mysql -u root -p
+ 1041  mysql -u root -p;
+ 1042  shutdown -a
+ 1043  shutdown --help
+ 1044  shutdown -r
+ 1045  shutdown -c
+ 1046  mysql -u 
+ 1047  mysql -u root -p
+ 1048  clr
+ 1049  alias clr=clear
+ 1050  clr
+ 1051  history
+1318  pwd
+ 1319  cd /home
+ 1320  cd ..
+ 1321  ls
+ 1322  cd
+ 1323  ls
+ 1324  cd /home
+ 1325  ls
+ 1326  cd 
+ 1327  cd /home/himanshu/Training/Linux/
+ 1328  cd
+ 1329  cd /home/himanshu/
+ 1330  cd ..
+ 1331  cd
+ 1332  cd ..
+ 1333  cd
+ 1334  clear
+ 1335  cd Training/
+ 1336  ls
+ 1337  ls HTML/
+ 1338  cd
+ 1339  ls /home/himanshu/Training/HTML/
+ 1340  clear
+ 1341  ls
+ 1342  ls -a
+ 1343  ls -l
+ 1344  ls -lh
+ 1345  ls /home/himanshu/Training/HTML/
+ 1346  ls -lh/home/himanshu/Training/HTML/
+ 1347  ls -lh /home/himanshu/Training/HTML/
+ 1348  ls -h /home/himanshu/Training/HTML/
+ 1349  ls -lh /home/himanshu/Training/HTML/
+ 1350  ls -l --block-size=K
+ 1351  ls -lh --block-size=K
+ 1352  clear
+ 1353* 
+ 1354  clear
+ 1355  ls -lhS --block-size=K
+ 1356  ls -d 
+ 1357  ls -d */
+ 1358  ls -d /home/himanshu/*
+ 1359  ls -d *
+ 1360  ls -d */
+ 1361  clear
+ 1362  ls
+ 1363  ls -g
+ 1364  clear
+ 1365  ls -lh
+ 1366  ls -g
+ 1367  ls -lG
+ 1368  clear
+ 1369  ls
+ 1370  ls --color=auto
+ 1371  ls --color=never
+ 1372  ls -li
+ 1373  ls
+ 1374  ls -lh
+ 1375  ls -l
+ 1376  ls -p
+ 1377  ls -r
+ 1378  ls
+ 1379  ls -r
+ 1380  ls -R
+ 1381  cd Training/
+ 1382  ls -R
+ 1383  ls -R -p
+ 1384  ls -lX
+ 1385  cd HTML/
+ 1386  ls -lX
+ 1387  ls
+ 1388  ls ~
+ 1389  ls -lt
+ 1390  ls -lh
+ 1391  ls
+ 1392  ls ~
+ 1393  cd
+ 1394  ls
+ 1395  ls ../
+ 1396  ls /
+ 1397  ls --version
+ 1398  ls
+ 1399  cd  Desktop/
+ 1400  ls
+ 1401  ls -p
+ 1402  rmdir fold
+ 1403  cd fold
+ 1404  ls
+ 1405  rm 1
+ 1406  cd 
+ 1407  cd Desktop/
+ 1408  ls
+ 1409  cd
+ 1410  mkdir dir11
+ 1411  ls
+ 1412  mkdir Desktop/dir1
+ 1413  cd Desktop/
+ 1414  cd
+ 1415  ls Desktop/
+ 1416  mkdir Desktop/dir1/dir1.1/dir1.1.1
+ 1417* 
+ 1418  mkdir Desktop/dir1/dir1.1 dir1.2
+ 1419  ls Desktop/dir1/
+ 1420  ls Desktop/dir1/dir1.1
+ 1421  cd Desktop/
+ 1422  mkdir dir2 dir3 dir4
+ 1423  ls
+ 1424  clear
+ 1425  cd
+ 1426  ls
+ 1427  mkdir Desktop/dir10
+ 1428  ls Desktop/
+ 1429  mkdir Desktop/dir1/dir1.1
+ 1430  mkdir Desktop/dir1 dir1.1
+ 1431  ls Desktop/
+ 1432  ls Desktop/dir1/
+ 1433  mclear
+ 1434  clear
+ 1435  mkdir -p Desktop/dir1/dir1.1/dir1.1.1
+ 1436  ls Desktop/
+ 1437  ls Desktop/dir1/
+ 1438  ls Desktop/dir1/dir1.1/
+ 1439  ls Desktop/dir1/dir1.1/dir1.1.1/
+ 1440  mkdir -p Desktop/dir2/dir1.1 dir1.1.1
+ 1441  ls Desktop/dir2
+ 1442  ls Desktop/dir2/dir1.1/
+ 1443  cd Desktop/
+ 1444  mkdir -v file1 file2 file3
+ 1445  mkdir -vp dir1/dir1.1/file1
+ 1446  ls dir1/dir1.1/file1
+ 1447  ls dir1/dir1.1/
+ 1448  mkdir -m=777 chor
+ 1449  ls
+ 1450  ls -h
+ 1451  ls -G
+ 1452  ls -lG
+ 1453  clear
+ 1454  ls -p
+ 1455  ls -Rls -R
+ 1456  rmdir file3
+ 1457  ls
+ 1458  rmdir file2 file1
+ 1459  ls
+ 1460  ls dir1/
+ 1461  ls dir1/dir1.1/
+ 1462  ls dir2
+ 1463  ls dir2/dir1.1/
+ 1464  rmdir -p dir2
+ 1465  rmdir -p dir2/dir1.1/
+ 1466  ls
+ 1467  rmdir -p dir1/dir1.1/dir1.1.1 file1
+ 1468  cd dir1/dir1.1/
+ 1469  ls
+ 1470  cd
+ 1471  rmdir Desktop/dir1/dir1.1/file1/
+ 1472  ls
+ 1473  cd Desktop/
+ 1474  ls
+ 1475  rmdir -p dir1/dir1.1/
+ 1476  ls
+ 1477  clear
+ 1478  file
+ 1479  cd /home/himanshu/Training/HTML/
+ 1480  file
+ 1481  ls
+ 1482  file yahoo.jpeg
+ 1483  file yahoo
+ 1484  file yahoo.jpeg
+ 1485  file yahoo
+ 1486  file *
+ 1487  file -s
+ 1488  file -s google.jpeg
+ 1489  cd
+ 1490  file Training/HTML/
+ 1491  file Training/HTML/*
+ 1492  cd Training/HTML/
+ 1493  file *
+ 1494  file [a-b]
+ 1495  file [a-b]*
+ 1496  file [b-x]*
+ 1497  file [1-9]*
+ 1498  file [1-9,a-m]*
+ 1499  file [1-9]*
+ 1500  cd
+ 1501  cd desktop
+ 1502  cd Desktop/
+ 1503  ls
+ 1504  mkdir dir1
+ 1505  mkdir -p dir2/dir2.1
+ 1506  ls dir2/
+ 1507  ls -R
+ 1508  cd dir1
+ 1509  cd ..
+ 1510  cd dir2/dir2.1/
+ 1511  touch file1 
+ 1512  touch file2 file3
+ 1513  ls
+ 1514  touch -a file1
+ 1515  stat file1
+ 1516  touch -a file1
+ 1517  stat file1
+ 1518  touch -a file1
+ 1519  stat file1
+ 1520  cd ..
+ 1521  stat dir2.1
+ 1522  cd dir2.1/
+ 1523  touch -m file1
+ 1524  stat file1
+ 1525  touch -m file1
+ 1526  stat file1
+ 1527  stat file2
+ 1528  stat file3
+ 1529  touch -r file1 file2
+ 1530  stat file2
+ 1531  touch -t 2016-01-25 03:53:00.223232 file2
+ 1532  touch -t 20160125 03:53:00.223232 file2
+ 1533* touch -t 20160525 03:53:00.223232 file2
+ 1534  touch -t 20160125035300.223232 file2
+ 1535  touch -t 201601250353.22 file2
+ 1536  stat file2
+ 1537  touch -c  file4
+ 1538  ls
+ 1539  touch -c file3
+ 1540  ls
+ 1541  rm file3
+ 1542  ls
+ 1543  rm *.jpeg
+ 1544  ls
+ 1545  cd
+ 1546  rm Desktop/dir1
+ 1547  cd Desktop/
+ 1548  cd dir1
+ 1549  cd 
+ 1550  cd Desktop/
+ 1551  ls dir1/
+ 1552  rm dir1/file2
+ 1553  ls
+ 1554  ls dir1/
+ 1555  rm dir2/
+ 1556  rm -r dir2/
+ 1557  ls
+ 1558  ls dir1/
+ 1559  cd dir1/
+ 1560  touch file1 file2
+ 1561  ls
+ 1562  rm -i file1
+ 1563  ls
+ 1564  cd ..
+ 1565  rm -ri file2
+ 1566  rm -ri dir1/
+ 1567  ls
+ 1568  history
+1569  cd Training/
+ 1570  giit add .
+ 1571  git commit -m"Linux Commands"
+ 1572  giit add .
+ 1573  git commit -m"Linux Commands"
+ 1574  git push origin master
+ 1575  cd Linux/
+ 1576  cd ..
+ 1577  git init Linux
+ 1578  git add .
+ 1579  git commit -m"Linux Commands"
+ 1580  git push origin master
+ 1581  ls */
+ 1582  ls *
+ 1583  ls -d */
+ 1584  ls -d *
+ 1585  ls -p
+ 1586  ls -r
+ 1587  ls -R
+ 1588  cd Training/HTML/
+ 1589  ls -lX
+ 1590  ls  -lt
+ 1591  ls ~
+ 1592  ls /
+ 1593  file *
+ 1594  file -s yahoo.jpeg
+ 1595  cd
+ 1596  cd dir1
+ 1597  cd Desktop/dir1/
+ 1598  ls
+ 1599  rm *.html
+ 1600  ls
+ 1601  mkdir -p dir2/dir3
+ 1602  ls
+ 1603  cd dir2/
+ 1604  ls
+ 1605  cd ..
+ 1606  rm -r dir1/dir2/dir3/
+ 1607  ls
+ 1608  cd dir1/
+ 1609  ls
+ 1610  cd dir2/
+ 1611  ls
+ 1612  cd ..
+ 1613  rm -r dir1/dir2
+ 1614  ls
+ 1615  cd dir1/
+ 1616  mkdir -p dir2/dir3/dir4
+ 1617  rmdir -p dir2/dir3/dir4/
+ 1618  ls
+ 1619  touch file1
+ 1620  cp file1 file2
+ 1621  cp file1 ~/Desktop/ file3
+ 1622  cp file1 ~/Desktop/ 
+ 1623  ls ~/Desktop/
+ 1624  ls
+ 1625  cd
+ 1626  cd Desktop/
+ 1627  rm file1
+ 1628  ls
+ 1629  cd dir1/
+ 1630  ls
+ 1631  cp file1 file2 ~/Desktop/
+ 1632  ls
+ 1633  touch file3
+ 1634  touch file4
+ 1635  cd
+ 1636  cd Desktop/dir1/
+ 1637  cd ..
+ 1638  rm *.txt
+ 1639  ls -lh
+ 1640  file
+ 1641  file -c
+ 1642  file -c type
+ 1643  file type file2
+ 1644  file -c file2
+ 1645  ls
+ 1646  file *
+ 1647  rm *.text
+ 1648  rm *.ASCII text
+ 1649  rm *.ASCIItext
+ 1650  ls
+ 1651  rm file1
+ 1652  rm file2
+ 1653  cd  dir1/
+ 1654  ls
+ 1655  cp file1 file2 file3 file4 ~/
+ 1656  cp file1 file2 file3 file4 ~/Database/
+ 1657  cd ~/Database/
+ 1658  ls
+ 1659  cd ~/Desktop/dir1/
+ 1660  cd ..
+ 1661  mkdir -p dir2/dir2.2/dir2.2.2
+ 1662  cp dir1 dir2/dir2.2/dir2.2.2/
+ 1663  cp -r dir1 dir2/dir2.2/dir2.2.2/
+ 1664  cd dir2/dir2.2/dir2.2.2/
+ 1665  ls
+ 1666  cd dir1/
+ 1667  ls
+ 1668  cd ..
+ 1669  cp dir2/dir2.2/dir2.2.2/dir1/ ~/Documents/
+ 1670  cp -r dir2/dir2.2/dir2.2.2/dir1/ ~/Documents/
+ 1671  cd ~/Documents/
+ 1672  ls
+ 1673  cd dir1/
+ 1674  ls
+ 1675  cd ..
+ 1676  ls
+ 1677  mkdir dir2
+ 1678  cp -r dir1/* dir2/
+ 1679  ls dir2/
+ 1680  cd 
+ 1681  cd Documents/
+ 1682  ls
+ 1683  rm -p dir1
+ 1684  rm -r dir1
+ 1685  ls
+ 1686  rm -r dir2/
+ 1687  ls
+ 1688  cd ~/Desktop/
+ 1689  ls
+ 1690  ls dir1/
+ 1691  cp --backup dir1/* ~/Documents/
+ 1692  cd ~/Documents/
+ 1693  ls
+ 1694  ls /
+ 1695  ls /home/
+ 1696  ls /home/himanshu/
+ 1697  rm file1
+ 1698  rm *
+ 1699  ls
+ 1700  cd ~/Desktop/
+ 1701  ls
+ 1702  rm -r dir2
+ 1703  ls
+ 1704  cp -i dir1/* dir2/
+ 1705  mkdir dir2
+ 1706  cp -i dir1/* dir2
+ 1707  cd dir2
+ 1708  ls
+ 1709  rm *
+ 1710  ls
+ 1711  cp -u -v ~/Desktop/dir1/* ~/Desktop/dir2/
+ 1712  ls
+ 1713  ls -l ~/Desktop/dir1/file1
+ 1714  ls -l ~/Desktop/dir2/file1
+ 1715  mkdir ~/Desktop/dir3
+ 1716  ls ~/Desktop/
+ 1717  mkdir ~/Desktop/dir4
+ 1718  ls ~/Desktop/
+ 1719  ls
+ 1720  mv file1 ~/Desktop/dir3
+ 1721  ls ~/Desktop/dir3
+ 1722  mv ~/Desktop/dir3/file1 newfile
+ 1723  ls ~/Desktop/dir3/
+ 1724  cd ..
+ 1725  cd dir3 
+ 1726  ls
+ 1727  ls -i
+ 1728  cd ..
+ 1729  cd dir1 
+ 1730  ls
+ 1731  ls -i
+ 1732  cd ~/Desktop/dir2
+ 1733  ls
+ 1734  mv  newfile  file1
+ 1735  ls
+ 1736  cd ..
+ 1737  mv dir2/file1 dir3/
+ 1738  ls dir3
+ 1739  ls dir2
+ 1740  ls dir1
+ 1741  mv dir1/* dir4
+ 1742  ls dir4
+ 1743  ls dir1
+ 1744  ls dir2/
+ 1745  mv -i dir2/* dir4
+ 1746  mkdir dir1/dir1.1/dir1.1.1
+ 1747  mkdir -r dir1/dir1.1/dir1.1.1
+ 1748  mkdir -p dir1/dir1.1/dir1.1.1
+ 1749  ls dir1/
+ 1750  ls dir1/dir1.1/
+ 1751  ls dir1/dir1.1/dir1.1.1/
+ 1752  mv dir1 dir3
+ 1753  ls
+ 1754  ls dir3
+ 1755  ls dir4
+ 1756  ls dir2
+ 1757  cp dir4/* dir2
+ 1758  ls dir2/
+ 1759  rm dir2/file3
+ 1760  ls
+ 1761  mv --suffix dir2/* dir4
+ 1762  ls dir2
+ 1763  ls dir4
+ 1764  rmm -r dir3/dir1/
+ 1765  rm -r dir3/dir1/
+ 1766  ls dir3/
+ 1767  ls dir2/
+ 1768  ls dir3/
+ 1769  ls dir4/
+ 1770  mv -u -v dir4/* dir2/  
+ 1771  ls dir2.
+ 1772  ls dir2/
+ 1773  ls dir3/
+ 1774  rename 'dir3/file1' file
+ 1775  cd dir3
+ 1776  ls
+ 1777  rename file1 file
+ 1778  rename file1 file2
+ 1779* rename 'file
+ 1780  rename -f file1 file2
+ 1781  rename -f 'file1' file2
+ 1782  mv file1 file
+ 1783  ls
+ 1784  mv file newfile
+ 1785  ls
+ 1786  man -aw
+ 1787  man -a
+ 1788  man ls
+ 1789  man passwd
+ 1790  man 2 passwd
+ 1791  man -a ls
+ 1792  man ls
+ 1793  man -a chmode
+ 1794  man -a chmod
+ 1795  man -aw chmod
+ 1796  man -f chmod
+ 1797  man 2 chmod
+ 1798  man -k chmod
+ 1799  man -m chmod
+ 1800  whereis chmod
+ 1801  whereis -m chmod
+ 1802  whereis ls
+ 1803  whereis -m ls
+ 1804  ls
+ 1805  ls dir4/
+ 1806  cd ..
+ 1807  ls dir4/
+ 1808  cd dir4
+ 1809  head testfile
+ 1810  ls
+ 1811  head testfile newfile
+ 1812  head -12 newfile
+ 1813  head -12 testfile
+ 1814  head -5 testfile
+ 1815  head -c testfile
+ 1816  head -c 20 testfile
+ 1817  head -c 40 testfile
+ 1818  head -c 40 k testfile
+ 1819  head -c 40k testfile
+ 1820  head -c 20k testfile
+ 1821  tail testfile
+ 1822  tail testfile newfile
+ 1823  cat testfile
+ 1824  man -m cat
+ 1825  man -f cat
+ 1826  man -k cat
+ 1827  man -f cat
+ 1828  cat testfile
+ 1829  ls ~/Desktop/dir2
+ 1830  ls ~/Desktop/dir3
+ 1831  ls ~/Desktop/dir4
+ 1832  rm ~/Desktop/dir3/*
+ 1833  ls ~/Desktop/dir3/
+ 1834  cd ~/Desktop/dir3
+ 1835  cat > catfile
+ 1836  cat catfile
+ 1837  ls
+ 1838  cat catfile
+ 1839  cat >> catfile
+ 1840  cat catfile
+ 1841  
+ 1842  cat >> catfile
+ 1843  cat catfile
+ 1844  cat catfile newcatfile
+ 1845  cat catfile>newcatfile
+ 1846  ls
+ 1847  cat newcatfile
+ 1848  cat >> newcatfile
+ 1849  cat newcatfile
+ 1850  cat catfile newcatfile > file
+ 1851  ls
+ 1852  cat file
+ 1853  cat - file catfile newcatfile > file1
+ 1854  cat file1
+ 1855  cat -n file
+ 1856  cat -b file1
+ 1857  cat -e file1
+ 1858  cat > file2 <<EOF
+This is test file for "EOF"
+eof
+
+EOF
+
+ 1859  cat file2
+ 1860  cat > file3 <<quit
+This is a test file for EOF
+quit
+
+ 1861  cat file3
+ 1862  ls 
+ 1863  cd ~/Desktop/dirdir4
+ 1864  cd ~/Desktop/dir4
+ 1865  ls
+ 1866  tac newfile
+ 1867  tac newfile --seprator "dollor"
+ 1868  tac newfile --separator "dollor"
+ 1869  tac newfile --separator "2"
+ 1870  tac newfile --separator "1"
+ 1871  tac newfile 
+ 1872  cd ~/Desktop/dir3
+ 1873  ls
+ 1874  tac file1
+ 1875  cat file1
+ 1876  tac file1 --separator "file"
+ 1877  cat catfile file file1 file2 file3 newcatfile > largefile
+ 1878  ls
+ 1879  cat largefile
+ 1880  cat largefile largefile largefile > verlargefile
+ 1881  ls
+ 1882  cat verylargefile
+ 1883  cat verlargefile
+ 1884  more verlargefile
+ 1885  more -5 verlargefile
+ 1886  more -d verlargefile
+ 1887  clear
+ 1888  more -d verlargefile
+ 1889  clear
+ 1890  more -d "Samll File" verlargefile
+ 1891  more -d verlargefile "Small  file"
+ 1892  more +5 verlargefile
+ 1893  ls
+ 1894  cd ~/Desktop/dir4
+ 1895  ls
+ 1896  more +5 newfile
+ 1897  more -s newfile
+ 1898  cd ~/Desktop/dir3
+ 1899  ls
+ 1900  more -s  newcatfile
+ 1901  more +file newcatfile
+ 1902  more +/file newcatfile
+ 1903  cd ~/Desktop/dir4
+ 1904  ls
+ 1905  more -5 newfile
+ 1906  more + newfile
+ 1907  more +5 newfile
+ 1908  cd ~/Desktop/dir3
+ 1909  ls
+ 1910  less verlargefile
+ 1911  /add
+ 1912  less verlargefile
+ 1913  cd /
+ 1914  ls
+ 1915  cd bin/
+ 1916  ls
+ 1917  cat mkdir
+ 1918  clear
+ 1919  ls
+ 1920  ls /
+ 1921  ls -p
+ 1922  ls -d *
+ 1923  clear
+ 1924  ls /var
+ 1925  cd
+ 1926  mkdir ~/Desktop/first
+ 1927  cd ~/Desktop/first/
+ 1928  cat days
+ 1929  cat > days
+ 1930  cat days
+ 1931  cat days |tac
+ 1932  cat days | tac |cat
+ 1933  cat days | tac | tac
+ 1934  cat > weeks
+ 1935  cut -d- -f1 weeks
+ 1936  cut -d- -f2 weeks
+ 1937  cut -d- -f3 weeks
+ 1938  ls
+ 1939  cd ~/Desktop/dir2
+ 1940  ls
+ 1941  cd ..
+ 1942  cd dir3
+ 1943  ls
+ 1944  cut -d' '-f largefile
+ 1945  cut -d''-f largefile
+ 1946  cut -d''-f1 largefile
+ 1947  cd ~/Desktop/first
+ 1948  cat weeks | grep s
+ 1949  cat weeks | grep f
+ 1950  grep M days
+ 1951  grep -v M days
+ 1952  grep -v s days
+ 1953  ls
+ 1954  comm days weeks
+ 1955  cat > day
+ 1956  cat > week
+ 1957  comm day week
+ 1958  cat week |wednesday Wednesday
+ 1959  cat week |'s/wednesday/Wednesday/'
+ 1960  cat week
+ 1961  cat week | tee wek| tac
+ 1962  ls
+ 1963  cat wek
+ 1964  cat wek |tr 'dy' 'DY'
+ 1965  sort wek |uniq
+ 1966  cd ~/Desktop/dir3
+ 1967  ls
+ 1968  sort catfile |uniq
+ 1969  sort catfile |uniq -c
+ 1970  cd ~/Desktop/first/
+ 1971  ls
+ 1972  sort wek | uniq -v
+ 1973  sort wek | uniq -c
+ 1974  wd wek
+ 1975  wc wek
+ 1976  cat wek
+ 1977  ls
+ 1978  cat day
+ 1979  wc day
+ 1980  wc -l day
+ 1981  od -c day
+ 1982  od -t day
+ 1983  od -t x1 day
+ 1984  od -b dy
+ 1985  od -b day
+ 1986  ls
+ 1987  gzip
+ 1988  gzip day days week weeks wek
+ 1989  ls
+ 1990  cat day
+ 1991  cat day.gz
+ 1992  gzip day.gz days.gz week.gz wek.gz weeks.gz |gzip new
+ 1993  ls
+ 1994  cd ..
+ 1995  cd dir1
+ 1996  cd dir2
+ 1997  ls
+ 1998  cat < file1
+ 1999  cat file1
+ 2000  ls
+ 2001  find .
+ 2002  find . -name
+ 2003  find . -name "*.html"
+ 2004  cd ~/Training/HTML/
+ 2005  find . -name "*html"
+ 2006  find .
+ 2007  cd 
+ 2008  locate test.html
+ 2009  locate passwd
+ 2010  date
+ 2011  cal
+ 2012  cal july 2017
+ 2013  slee 10
+ 2014  sleep 10
+ 2015  time
+ 2016  time sleep 5
+ 2017  cd ~/Desktop/first/
+ 2018  ls
+ 2019  zcat  day
+ 2020  zmore days
+ 2021  df
+ 2022  whoami
+ 2023  clear
+ 2024  who
+ 2025  root
+ 2026  su root
+ 2027  cd
+ 2028  useradd
+ 2029  useradd -m -d /home/katiyar -c "katiyar" katiyar
+ 2030  cd /etc/
+ 2031  ls
+ 2032  cat passwd
+ 2033  useradd
+ 2034  cd ..
+ 2035* useradd -m -d katiyar 
+ 2036  useradd katiyar
+ 2037  su- root
+ 2038  su root
+ 2039  su Himanshu
+ 2040  cd
+ 2041  su Himanshu
+ 2042  useradd admin
+ 2043  cd /home/
+ 2044  user add admin
+ 2045  user-m -d add admin
+ 2046  useradd admin
+ 2047  use adduser admin
+ 2048  useradd  -m -d /home/admin -s /bin/bash -G sudo admin
+ 2049  useradd  -m -d /home/ad -s /bin/bash -G sudo ad
+ 2050  passwd
+ 2051  type  pwd
+ 2052  type ls
+ 2053  echo loacl    host    is  not           available
+ 2054  echo "Text Check"
+ 2055  echo "Text Check"set -x
+ 2056  set -x
+ 2057  echo
+ 2058  set +x
+ 2059  echo local
+ 2060  history 10
+ 2061  histsize
+ 2062  $histsize
+ 2063  $HISTSIZE
+ 2064  $HISTFILE
+ 2065  npm install -g bower
+ 2066  i10
+ 2067  i2093
+ 2068  netstat
+ 2069  ip
+ 2070  ifconfig
+ 2071  traceroute
+ 2072  tracepath
+ 2073  nslookup
+ 2074  ifplugstatus
+ 2075  cd ~/Desktop/dir2
+ 2076  ls
+ 2077  vi newfile
+   2078  history
