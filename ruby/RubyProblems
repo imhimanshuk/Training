@@ -1,0 +1,22 @@
+Array Method
+1:reject method
+2:reject! method
+
+String Method
+3:str==obj
+4:str=~obj
+5:str[fixnum]=new_str
+6:crypt(salt_str) → new_str
+7:encode(encoding [, options] ) → str 
+  encode(dst_encoding, src_encoding [, options] ) → str
+  encode([options]) → str 
+8:match(pattern) → matchdata
+  match(pattern, pos) → matchdata or nil 
+9:ord
+10:succ!→ str
+11: sum(n=16)→ integer
+12:unpack
+13:valid_encoding?→ true or false
+
+Hash Method
+14:compare_by_identity
