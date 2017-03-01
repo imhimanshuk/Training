@@ -1,0 +1,102 @@
+2.4.0 :127 > time=Time.new
+ => 2017-03-01 12:42:46 +0530 
+2.4.0 :128 > puts "Current Time :" + time.inspect
+Current Time :2017-03-01 12:42:46 +0530
+ => nil 
+2.4.0 :129 > time1=Time.now
+ => 2017-03-01 12:43:33 +0530 
+2.4.0 :130 > puts "Current time :" +time1.inspect
+Current time :2017-03-01 12:43:33 +0530
+ => nil 
+
+components of a Date & Time:
+
+2.4.0 :131 > time=Time.new
+ => 2017-03-01 12:47:57 +0530 
+2.4.0 :132 > puts time.year
+2017
+ => nil 
+2.4.0 :133 > puts time.month
+3
+ => nil 
+2.4.0 :134 > puts time.day
+1
+ => nil 
+2.4.0 :135 > puts time.wday
+3
+ => nil 
+2.4.0 :136 > puts time.yday
+60
+ => nil 
+2.4.0 :137 > puts time.hour
+12
+ => nil 
+2.4.0 :138 > puts time.min
+47
+ => nil 
+2.4.0 :139 > puts time.sec
+57
+ => nil 
+2.4.0 :140 > puts time.usec
+985066
+ => nil 
+2.4.0 :141 > puts time.zone
+IST
+ => nil 
+
+Formatting Times and Dates:
+
+2.4.0 :150 > time=Time.new
+ => 2017-03-01 12:56:49 +0530 
+2.4.0 :151 > puts time.strftime("%Y-%m-%d %H:%M:%S")
+2017-03-01 12:56:49
+ => nil 
+2.4.0 :150 > time=Time.new
+ => 2017-03-01 12:56:49 +0530 
+2.4.0 :151 > puts time.strftime("%Y-%m-%d %H:%M:%S")
+2017-03-01 12:56:49
+ => nil 
+2.4.0 :152 > puts time.strftime("%a")
+Wed
+ => nil 
+2.4.0 :153 > puts time.strftime("%A")
+Wednesday
+ => nil 
+2.4.0 :154 > puts time.strftime("%b")
+Mar
+ => nil 
+2.4.0 :155 > puts time.strftime("%B")
+March
+ => nil 
+2.4.0 :156 > puts time.strftime("%c")
+Wed Mar  1 12:56:49 2017
+ => nil 
+2.4.0 :157 > puts time.strftime("%C")
+20
+ => nil 
+2.4.0 :158 > puts time.strftime("%d")
+01
+ => nil 
+2.4.0 :159 > puts time.strftime("%H")
+12
+ => nil 
+2.4.0 :160 > puts time.strftime("%l")
+12
+ => nil 
+2.4.0 :161 > puts time.strftime("%j")
+060
+ => nil 
+2.4.0 :162 > puts time.strftime("%m")
+03
+ => nil 
+2.4.0 :163 > puts time.strftime("%%")
+%
+ => nil 
+2.4.0 :164 > puts time.strftime("%A, %B %d, %Y  %l:%M:%S %p")
+Wednesday, March 01, 2017  12:56:49 PM
+ => nil 
+
+
+
+
+

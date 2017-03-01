@@ -20,3 +20,5 @@ String Method
 
 Hash Method
 14:compare_by_identity
+15:rehash
+16:
